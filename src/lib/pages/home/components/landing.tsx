@@ -1,6 +1,6 @@
 import { Flex, Text, Heading } from '@chakra-ui/react';
-import reactLogo from '/assets/react.svg';
-import viteLogo from '/assets/vite.svg';
+import reactLogo from '/assets/icons/react.svg';
+import viteLogo from '/assets/icons/vite.svg';
 
 export const Landing = () => {
   return (
