@@ -27,7 +27,7 @@ const Page404 = () => {
       >
         <Image
           width={400}
-          src='/assets/404 Error-rafiki.svg'
+          src='/assets/images/404 Error-rafiki.svg'
         />
         <Link
           fontSize='xs'
@@ -40,7 +40,12 @@ const Page404 = () => {
 
       <Box>
         <Text>It&apos;s Okay!</Text>
-        <Button onClick={handleBackToHome}>Let&apos;s Head Back</Button>
+        <Button
+          mt='xs'
+          onClick={handleBackToHome}
+        >
+          Let&apos;s Head Back
+        </Button>
       </Box>
     </Grid>
   );
