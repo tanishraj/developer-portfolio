@@ -1,12 +1,10 @@
-import { Grid } from '@chakra-ui/react';
-
-import { Landing } from './components/landing';
+import { HeroSection } from './components/hero-section';
 
 const Home = () => {
   return (
-    <Grid placeItems='center'>
-      <Landing />
-    </Grid>
+    <>
+      <HeroSection />
+    </>
   );
 };
 
