@@ -1,7 +1,9 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, FlexProps } from '@chakra-ui/react';
 import { ThemeToggle } from './theme-toggler';
 
-export const Header = () => {
+interface HeaderProps extends FlexProps {}
+
+export const Header = (props: HeaderProps) => {
   return (
     <Flex
       as='header'
@@ -10,6 +12,7 @@ export const Header = () => {
       alignSelf='flex-start'
       justifyContent='center'
       gridGap={2}
+      {...props}
     >
       <Box marginLeft='auto'>
         <ThemeToggle />
