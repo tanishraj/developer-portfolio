@@ -1,4 +1,4 @@
-import { Box, Container, Grid, GridItem, Heading } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading } from '@chakra-ui/react';
 
 export const HeroSection = () => {
   return (
@@ -8,21 +8,26 @@ export const HeroSection = () => {
       textTransform='uppercase'
     >
       <Container>
-        <Grid
+        <Flex
           placeItems='center'
           height='100vh'
           width='full'
+          flexFlow='column'
+          justifyContent='center'
+          alignItems='center'
         >
-          <GridItem>
-            <Heading size='2xl'>Tanish Raj</Heading>
-            <Box
-              letterSpacing='1rem'
-              ps='1rem'
-            >
-              Frontend Engineer
-            </Box>
-          </GridItem>
-        </Grid>
+          <Heading
+            size={{ base: '2xl-mobile', md: 'xl-desktop', lg: '2xl-desktop' }}
+          >
+            Tanish Raj
+          </Heading>
+          <Box
+            letterSpacing={{ base: '3xl', md: '4xl', lg: '5xl' }}
+            ps={{ base: '0.3em', md: '0.4em', lg: '1em' }}
+          >
+            Frontend Engineer
+          </Box>
+        </Flex>
       </Container>
     </Box>
   );
