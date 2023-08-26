@@ -55,6 +55,9 @@ const letterSpacings = {
   lg: '0',
   xl: '0.005em',
   '2xl': '0.01em',
+  '3xl': '0.3em',
+  '4xl': '0.5em',
+  '5xl': '1em',
 };
 
 export const typography = {

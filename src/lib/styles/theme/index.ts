@@ -7,6 +7,7 @@ import { zIndices } from './foundation/z-index';
 import { space } from './foundation/spacing';
 import { semanticTokens } from './tokens';
 import { ContainerTheme } from './components/container';
+import { TextTheme } from './components/text';
 
 export const theme = extendTheme({
   semanticTokens,
@@ -19,5 +20,14 @@ export const theme = extendTheme({
 
   components: {
     Container: ContainerTheme,
+    Box: ContainerTheme,
+    Flex: ContainerTheme,
+    Stack: ContainerTheme,
+    HStack: ContainerTheme,
+    VStack: ContainerTheme,
+    SimpleGrid: ContainerTheme,
+    Text: TextTheme,
+    Heading: TextTheme,
+    Link: TextTheme,
   },
 });
