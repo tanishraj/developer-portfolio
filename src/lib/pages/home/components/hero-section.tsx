@@ -1,5 +1,4 @@
 import { Box, Container, Flex, Heading } from '@chakra-ui/react';
-
 export const HeroSection = () => {
   return (
     <Container>
@@ -12,6 +11,7 @@ export const HeroSection = () => {
         textTransform='uppercase'
         textAlign='center'
         minHeight='100vh'
+        p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
         <Heading
           size={{ base: '2xl-mobile', md: 'xl-desktop', lg: '2xl-desktop' }}

@@ -1,11 +1,9 @@
 import { toRem } from '../utils/to-rem';
-
 const fonts = {
   body: 'barlow, system-ui, sans-serif',
   heading: 'archive, Georgia, serif',
   mono: 'Menlo, monospace',
 };
-
 const fontSizes = {
   '3xs': toRem(8),
   '2xs': toRem(12),
@@ -18,8 +16,12 @@ const fontSizes = {
   '3xl': toRem(48),
   '4xl': toRem(64),
   '5xl': toRem(80),
+  '6xl': toRem(96),
+  '7xl': toRem(112),
+  '8xl': toRem(128),
+  '9xl': toRem(144),
+  '10xl': toRem(160),
 };
-
 const fontWeights = {
   hairline: 100,
   thin: 200,
@@ -31,7 +33,6 @@ const fontWeights = {
   extrabold: 800,
   black: 900,
 };
-
 const lineHeights = {
   '3xs': toRem(8),
   '2xs': toRem(12),
@@ -46,7 +47,6 @@ const lineHeights = {
   '5xl': toRem(80),
   '6xl': toRem(92),
 };
-
 const letterSpacings = {
   '2xs': '-0.02em',
   xs: '-0.015em',
@@ -59,7 +59,6 @@ const letterSpacings = {
   '4xl': '0.5em',
   '5xl': '1em',
 };
-
 export const typography = {
   fonts,
   fontSizes,

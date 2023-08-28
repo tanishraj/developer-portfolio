@@ -1,5 +1,4 @@
 import { Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
-
 export const AboutSection = () => {
   return (
     <Container>
@@ -9,10 +8,11 @@ export const AboutSection = () => {
         flexFlow='column'
         justifyContent='center'
         minHeight='100vh'
+        p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
         <Heading
           mb='2xl'
-          size={{ base: 'md-mobile', md: 'lg-mobile', lg: 'xl-mobile' }}
+          size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
         >
           About Me
         </Heading>
@@ -33,7 +33,7 @@ export const AboutSection = () => {
           >
             <Text
               as='p'
-              size='sm'
+              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
             >
               "Hello, I'm Tanish. I discovered my passion for coding during my
               time at , where I obtained my degree in Master of Computer
@@ -44,7 +44,7 @@ export const AboutSection = () => {
             </Text>
             <Text
               as='p'
-              size='sm'
+              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
             >
               Specialising in React and Vue.js, I pride myself on my attention
               to detail, problem-solving capabilities, and a keen eye for
@@ -54,7 +54,7 @@ export const AboutSection = () => {
             </Text>
             <Text
               as='p'
-              size='sm'
+              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
             >
               When I'm not coding, you'll find me playing some indoor and
               outdoor games.
