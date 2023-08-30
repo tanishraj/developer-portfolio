@@ -1,14 +1,7 @@
-import {
-  Flex,
-  FlexProps,
-  Heading,
-  HeadingProps,
-  Text,
-  TextProps,
-} from '@chakra-ui/react';
+import { Flex, FlexProps, Text, TextProps } from '@chakra-ui/react';
 
 type ChipCustomStyleType = {
-  headingStyle?: HeadingProps;
+  headingStyle?: TextProps;
   descriptionStyle?: TextProps;
 };
 
@@ -31,13 +24,13 @@ export const Chips = (chipsProps: ChipsProps) => {
       rowGap='4xs'
       {...restProps}
     >
-      <Heading
+      <Text
         as='h3'
         size='sm'
         {...customStyle?.headingStyle}
       >
         {title}
-      </Heading>
+      </Text>
       <Text
         as='p'
         size='xs'
