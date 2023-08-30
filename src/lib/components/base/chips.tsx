@@ -1,11 +1,18 @@
-import { Flex, Heading, HeadingProps, Text, TextProps } from '@chakra-ui/react';
+import {
+  Flex,
+  FlexProps,
+  Heading,
+  HeadingProps,
+  Text,
+  TextProps,
+} from '@chakra-ui/react';
 
 type ChipCustomStyleType = {
   headingStyle?: HeadingProps;
   descriptionStyle?: TextProps;
 };
 
-interface ChipsProps {
+interface ChipsProps extends FlexProps {
   title: string;
   description: string;
   customStyle?: ChipCustomStyleType;
