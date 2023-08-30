@@ -1,7 +1,6 @@
 import { Container, Flex, Heading } from '@chakra-ui/react';
-import { Card } from '../../../components/base/card';
 import { Chips } from '../../../components/base/chips';
-import { Hexagon } from '../../../components/base/hexagon';
+import { Path } from '../../../components/base/path';
 const myJourneyData = [
   {
     companyName: 'Thomson Reuters',
@@ -18,21 +17,21 @@ const myJourneyData = [
     startDate: '2018',
     endDate: '2019',
   },
-  // {
-  //   companyName: 'Thomson Reuters',
-  //   startDate: '2018',
-  //   endDate: '2019',
-  // },
-  // {
-  //   companyName: 'Thomson Reuters',
-  //   startDate: '2018',
-  //   endDate: '2019',
-  // },
-  // {
-  //   companyName: 'Thomson Reuters',
-  //   startDate: '2018',
-  //   endDate: '2019',
-  // },
+  {
+    companyName: 'Thomson Reuters',
+    startDate: '2018',
+    endDate: '2019',
+  },
+  {
+    companyName: 'Thomson Reuters',
+    startDate: '2018',
+    endDate: '2019',
+  },
+  {
+    companyName: 'Thomson Reuters',
+    startDate: '2018',
+    endDate: '2019',
+  },
 ];
 export const JourneySection = () => {
   return (
@@ -45,13 +44,17 @@ export const JourneySection = () => {
         minHeight='100vh'
         p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
-        <Hexagon
-          size={{ base: '50px', md: '50px' }}
-          outlineSize='2px'
-          isAnimate={true}
-          hexagonStyles={{
-            iconStyle: { bgColor: 'red' },
-            borderStyle: { bgColor: 'yellow' },
+        // TODO: remove, just for testing
+        <Path
+          checkpointSize={6}
+          position='relative'
+          hexagonProps={{
+            size: { base: '50px', md: '50px' },
+            outlineSize: '2px',
+            hexagonStyles: {
+              iconStyle: { bgColor: 'red' },
+              borderStyle: { bgColor: 'yellow' },
+            },
           }}
         />
         <Heading
