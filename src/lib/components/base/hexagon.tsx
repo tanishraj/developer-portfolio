@@ -6,7 +6,7 @@ type IconStyleType = {
   animationStyle?: BoxProps;
 };
 
-interface HexagonProps extends BoxProps {
+export interface HexagonProps extends BoxProps {
   size?: ResponsiveValue<string>;
   outlineSize?: string;
   isAnimate?: boolean;
@@ -38,7 +38,6 @@ export const Hexagon = (props: HexagonProps) => {
       position='relative'
       height={size}
       width={size}
-      cursor='pointer'
       {...restProps}
     >
       <Box
