@@ -1,7 +1,6 @@
 import { Container, Flex, Heading } from '@chakra-ui/react';
-import { Chips } from '../../../components/base/chips';
 import { Path } from '../../../components/base/path';
-const myJourneyData = [
+export const myJourneyData = [
   {
     companyName: 'Thomson Reuters',
     startDate: '2018',
@@ -44,40 +43,62 @@ export const JourneySection = () => {
         minHeight='100vh'
         p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
-        // TODO: remove, just for testing
-        <Path
-          checkpointSize={6}
-          position='relative'
-          hexagonProps={{
-            size: { base: '50px', md: '50px' },
-            outlineSize: '2px',
-            hexagonStyles: {
-              iconStyle: { bgColor: 'red' },
-              borderStyle: { bgColor: 'yellow' },
-            },
-          }}
-        />
         <Heading
           mb={{ base: '5xl', md: '2xl' }}
           size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
         >
           My Expertise
         </Heading>
-        <Flex
-          flexDirection={{ base: 'column', md: 'row' }}
-          alignItems='stretch'
-          justifyContent='space-between'
-          flexWrap={{ base: 'wrap', md: 'nowrap' }}
-          gap={{ base: '5xl', md: 'xl', lg: '6xl' }}
-        >
-          {myJourneyData.map(journey => (
-            <Chips
-              key={journey.companyName}
-              title={journey.companyName}
-              description={`${journey.startDate} - ${journey.endDate}`}
-            />
-          ))}
-        </Flex>
+        <Path
+          myJourney={myJourneyData}
+          position='relative'
+          height={'400px'}
+          pathStyle={{ color: 'white' }}
+          hexagonProps={{
+            size: { base: '50px', md: '50px' },
+            outlineSize: '5px',
+            hexagonStyles: {
+              iconStyle: { bgColor: '#b4b3b5' },
+              borderStyle: { bgColor: '#dddddd' },
+              animationStyle: { bgColor: '#fff' },
+            },
+          }}
+          chipsStyle={{ minWidth: { base: '195px' } }}
+          chipContainerStyle={{
+            ':nth-child(odd) div.chips': {
+              position: 'absolute',
+              left: '50%',
+              bottom: '100%',
+              transform: 'translate(-20px, -50px)',
+            },
+            ':nth-child(even) div.chips': {
+              position: 'absolute',
+              right: '50%',
+              transform: 'translate(20px, 50px)',
+            },
+
+            ':nth-child(odd) div.connectionLine::before': {
+              content: '""',
+              position: 'absolute',
+              borderLeft: '1px solid white',
+              height: '100%',
+              bottom: '100%',
+              left: 'calc(50% - 0.5px)',
+            },
+            ':nth-child(even) div.connectionLine::before': {
+              content: '""',
+              position: 'absolute',
+              borderLeft: '1px solid white',
+              height: '100%',
+              top: '100%',
+              left: 'calc(50% - 0.5px)',
+            },
+            ':last-child div.chips>div': {
+              color: 'red',
+              borderColor: 'red',
+            },
+          }}
+        />
       </Flex>
     </Container>
   );
