@@ -6,9 +6,9 @@ import { JourneySection } from './components/journey-section';
 const Home = () => {
   return (
     <>
-      {/* <HeroSection />
+      <HeroSection />
       <AboutSection />
-      <ExpertiseSection /> */}
+      <ExpertiseSection />
       <JourneySection />
     </>
   );

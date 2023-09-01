@@ -1,17 +1,25 @@
-import { Flex, FlexProps } from '@chakra-ui/react';
+import { Box, Flex, FlexProps } from '@chakra-ui/react';
 import { Hexagon, HexagonProps } from './hexagon';
+import { Chips } from './chips';
+import { myJourneyData } from '../../pages/home/components/journey-section';
 
 interface PathProps extends FlexProps {
-  checkpointSize?: number;
+  myJourney?: typeof myJourneyData;
   pathStyle?: FlexProps;
   hexagonProps?: HexagonProps;
+  chipContainerStyle?: object;
+  chipsStyle?: FlexProps;
+  connection?: boolean;
 }
 
 export const Path = (props: PathProps) => {
   const {
     pathStyle,
-    checkpointSize = 1,
+    myJourney,
     hexagonProps,
+    chipContainerStyle,
+    chipsStyle,
+    connection = false,
     ...restProps
   } = props ?? {};
   return (
@@ -33,8 +41,28 @@ export const Path = (props: PathProps) => {
       }}
       {...restProps}
     >
-      {Array.from('x'.repeat(checkpointSize)).map(_checkpoint => (
-        <Hexagon {...hexagonProps} />
+      {myJourney?.map((journey, index) => (
+        <Flex
+          position='relative'
+          __css={{
+            ...chipContainerStyle,
+          }}
+        >
+          <Box className='connectionLine'>
+            <Hexagon
+              isAnimate={index === myJourney.length - 1}
+              className='hexagon'
+              {...hexagonProps}
+            />
+            <Box className='chips'>
+              <Chips
+                title={journey?.companyName}
+                description={`${journey?.startDate} - ${journey.endDate}`}
+                {...chipsStyle}
+              />
+            </Box>
+          </Box>
+        </Flex>
       ))}
     </Flex>
   );
