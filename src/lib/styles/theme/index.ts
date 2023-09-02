@@ -9,6 +9,7 @@ import { semanticTokens } from './tokens';
 import { ContainerTheme } from './components/container';
 import { TextTheme } from './components/text';
 import { ButtonTheme } from './components/button';
+import { InputTheme } from './components/input';
 
 export const theme = extendTheme({
   semanticTokens,
@@ -31,5 +32,6 @@ export const theme = extendTheme({
     Heading: TextTheme,
     Link: TextTheme,
     Button: ButtonTheme,
+    Input: InputTheme,
   },
 });

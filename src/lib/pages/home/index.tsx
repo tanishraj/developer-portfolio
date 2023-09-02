@@ -8,11 +8,11 @@ import { PortfolioSection } from './components/portfolio-section';
 const Home = () => {
   return (
     <>
-      <HeroSection />
+      {/* <HeroSection />
       <AboutSection />
       <ExpertiseSection />
       <JourneySection />
-      <PortfolioSection />
+      <PortfolioSection /> */}
       <ContactSection />
     </>
   );

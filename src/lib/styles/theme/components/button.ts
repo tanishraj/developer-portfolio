@@ -6,7 +6,6 @@ export const ButtonTheme = defineStyleConfig({
     px: 'xs',
     borderRadius: 0,
     background: 'black',
-    minHeight: '50px',
     _active: {
       transform: 'scale(0.95)',
     },
