@@ -1,12 +1,5 @@
-import {
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Image,
-  ResponsiveValue,
-} from '@chakra-ui/react';
+import { Container, Flex, Grid, Heading } from '@chakra-ui/react';
+import { PortfolioItem } from '../../../components/base/portfolio-item';
 
 export const PortfolioSection = () => {
   return (
@@ -31,39 +24,50 @@ export const PortfolioSection = () => {
           templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)' }}
           gap={2}
         >
-          {RenderGridItem(1, 1, './public/assets/images/project-1.jpg')}
-          {RenderGridItem(1, 1, './public/assets/images/project-2.jpg')}
-          {RenderGridItem(1, 2, './public/assets/images/project-6.jpg')}
-          {RenderGridItem(3, 1, './public/assets/images/project-4.jpg')}
-          {RenderGridItem(2, 1, './public/assets/images/project-5.jpg')}
-          {RenderGridItem(1, 1, './public/assets/images/project-3.jpg')}
-          {RenderGridItem(
-            { base: 3, md: 2 },
-            1,
-            './public/assets/images/project-7.jpg'
-          )}
+          <PortfolioItem
+            cols={1}
+            rows={1}
+            imgSrc='./public/assets/images/project-1.jpg'
+            text='Responsive Web Application'
+          />
+          <PortfolioItem
+            cols={1}
+            rows={1}
+            imgSrc='./public/assets/images/project-2.jpg'
+            text='Responsive Mobile Application'
+          />
+          <PortfolioItem
+            cols={1}
+            rows={2}
+            imgSrc='./public/assets/images/project-6.jpg'
+            text='Responsive IOS Application'
+          />
+          <PortfolioItem
+            cols={3}
+            rows={1}
+            imgSrc='./public/assets/images/project-4.jpg'
+            text='Responsive Web Application'
+          />
+          <PortfolioItem
+            cols={2}
+            rows={1}
+            imgSrc='./public/assets/images/project-5.jpg'
+            text='Responsive Web3 Application'
+          />
+          <PortfolioItem
+            cols={1}
+            rows={1}
+            imgSrc='./public/assets/images/project-3.jpg'
+            text='Responsive Blockchain Application'
+          />
+          <PortfolioItem
+            cols={{ base: 3, md: 2 }}
+            rows={1}
+            imgSrc='./public/assets/images/project-7.jpg'
+            text='Responsive Web Application'
+          />
         </Grid>
       </Flex>
     </Container>
-  );
-};
-
-const RenderGridItem = (
-  cols: ResponsiveValue<number>,
-  rows: ResponsiveValue<number>,
-  imgSrc: string
-) => {
-  return (
-    <GridItem
-      colSpan={cols}
-      rowSpan={rows}
-    >
-      <Image
-        src={imgSrc}
-        height='100%'
-        width='100%'
-        objectFit='cover'
-      />
-    </GridItem>
   );
 };
