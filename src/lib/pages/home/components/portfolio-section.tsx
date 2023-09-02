@@ -19,7 +19,6 @@ export const PortfolioSection = () => {
           Portfolio
         </Heading>
         <Grid
-          h='400px'
           templateRows={{ base: 'repeat(4, 1fr)', md: 'repeat(2, 1fr)' }}
           templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)' }}
           gap={2}
