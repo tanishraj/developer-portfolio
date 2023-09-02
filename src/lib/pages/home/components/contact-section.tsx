@@ -6,15 +6,12 @@ import {
   Heading,
   Textarea,
   Text,
-  Button,
-  IconButton,
-  useColorMode,
 } from '@chakra-ui/react';
 import { Textbox } from '../../../components/base/text-box';
 import { RiMailFill } from 'react-icons/ri';
+import { BaseButton } from '../../../components/base/base-button';
 
 export const ContactSection = () => {
-  const { colorMode } = useColorMode();
   return (
     <Container>
       <Flex
@@ -65,26 +62,14 @@ export const ContactSection = () => {
             />
           </GridItem>
         </Grid>
-        <Button
-          size='md'
-          variant='outline'
-          borderColor={colorMode === 'light' ? 'black' : 'white'}
-          width='200px'
+        <BaseButton
           alignSelf='flex-end'
           mt='4xl'
-          _hover={{ borderColor: 'inherit', outline: 'none' }}
-          _active={{ borderColor: 'white', outline: 'none' }}
-          _focus={{ borderColor: 'white', outline: 'none' }}
-          _focusVisible={{ borderColor: 'white', outline: 'none' }}
+          leftIcon={<RiMailFill />}
+          iconSpacing='3xs'
         >
-          <IconButton
-            aria-label={''}
-            background='transparent'
-            _hover={{ background: 'transparent' }}
-            icon={<RiMailFill />}
-          />
           Send
-        </Button>
+        </BaseButton>
       </Flex>
     </Container>
   );
