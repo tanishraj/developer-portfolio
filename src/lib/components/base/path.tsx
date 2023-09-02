@@ -43,6 +43,7 @@ export const Path = (props: PathProps) => {
     >
       {myJourney?.map((journey, index) => (
         <Flex
+          key={index}
           position='relative'
           __css={{
             ...chipContainerStyle,

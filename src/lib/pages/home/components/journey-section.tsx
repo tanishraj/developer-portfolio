@@ -1,5 +1,7 @@
 import { Container, Flex, Heading } from '@chakra-ui/react';
 import { Path } from '../../../components/base/path';
+import { Textbox } from '../../../components/base/text-box';
+import { useState } from 'react';
 export const myJourneyData = [
   {
     companyName: 'Thomson Reuters',
@@ -33,8 +35,18 @@ export const myJourneyData = [
   },
 ];
 export const JourneySection = () => {
+  const [firstName, setFirstName] = useState('');
   return (
     <Container>
+      <Textbox
+        label='First Name'
+        isError={false}
+        helperText='Needs your name as per your bank statement'
+        value={firstName}
+        onChange={e => {
+          setFirstName(e.target.value);
+        }}
+      />
       <Flex
         flex='1'
         height='full'
