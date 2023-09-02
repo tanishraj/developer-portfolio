@@ -13,17 +13,25 @@ interface TextBoxProps extends InputProps {
   value?: string;
   helperText?: string;
   errorMessage?: string;
+  type?: string;
 }
 
 export const Textbox = (props: TextBoxProps) => {
-  const { label, helperText, errorMessage, isError, value, ...restProps } =
-    props ?? {};
+  const {
+    label,
+    helperText,
+    errorMessage,
+    isError,
+    value,
+    type = 'text',
+    ...restProps
+  } = props ?? {};
 
   return (
     <FormControl isInvalid={isError}>
       <FormLabel size={{ base: 'sm' }}>{label}</FormLabel>
       <Input
-        type='email'
+        type={type}
         value={value}
         borderRadius='0'
         outline='none'
