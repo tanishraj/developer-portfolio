@@ -10,6 +10,7 @@ import {
 import { Textbox } from '../../../components/base/text-box';
 import { RiMailFill } from 'react-icons/ri';
 import { BaseButton } from '../../../components/base/base-button';
+import { BaseTextarea } from '../../../components/base/base-text-area';
 
 export const ContactSection = () => {
   return (
@@ -29,42 +30,45 @@ export const ContactSection = () => {
           Contact
         </Heading>
         <Grid
-          templateColumns='repeat(2, 1fr)'
-          gap={16}
+          templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
+          gap={{ base: '2xs', md: '5xl' }}
         >
           <GridItem>
-            <Textbox
-              mb='xs'
-              label='First Name'
-              type='text'
-            />
-            <Textbox
-              mb='xs'
-              label='Last Name'
-              type='text'
-            />
-            <Textbox
-              label='Email'
-              type='email'
-            />
+            <Flex
+              flex='1'
+              flexDirection='column'
+              gap={{ base: '2xs', md: 'sm' }}
+            >
+              <Textbox
+                label='First Name'
+                type='text'
+              />
+              <Textbox
+                label='Last Name'
+                type='text'
+              />
+              <Textbox
+                label='Email'
+                type='email'
+              />
+            </Flex>
           </GridItem>
           <GridItem>
-            <Text mb='4xs'>Message: </Text>
-            <Textarea
-              h='full'
-              borderRadius='0'
-              outline='none'
-              borderColor={'#333'}
-              _hover={{ borderColor: 'inherit', outline: 'none' }}
-              _active={{ borderColor: 'white', outline: 'none' }}
-              _focus={{ borderColor: 'white', outline: 'none' }}
-              _focusVisible={{ borderColor: 'white', outline: 'none' }}
-            />
+            <Flex
+              flex='1'
+              height={{ base: 'auto', md: 'full' }}
+            >
+              <BaseTextarea
+                label='Message'
+                resize={{ base: 'vertical', md: 'none' }}
+                height={{ base: 'auto', md: 'calc(100% - 51px)' }}
+              />
+            </Flex>
           </GridItem>
         </Grid>
         <BaseButton
           alignSelf='flex-end'
-          mt='4xl'
+          mt='3xl'
           leftIcon={<RiMailFill />}
           iconSpacing='3xs'
         >
