@@ -3,6 +3,8 @@ import { ComponentStyleConfig } from '@chakra-ui/react';
 export const TextareaTheme: ComponentStyleConfig = {
   baseStyle: {
     borderRadius: 0,
+    minHeight: '300px',
+    minWidth: '180px',
   },
   variants: {
     outline: {
@@ -29,8 +31,6 @@ export const TextareaTheme: ComponentStyleConfig = {
   },
   sizes: {
     md: {
-      minHeight: '300px',
-      minWidth: '180px',
       fontSize: 'md',
       lineHeight: 'md',
       letterSpacing: 'md',
