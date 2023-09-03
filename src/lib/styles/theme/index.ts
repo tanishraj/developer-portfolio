@@ -10,6 +10,7 @@ import { ContainerTheme } from './components/container';
 import { TextTheme } from './components/text';
 import { ButtonTheme } from './components/button';
 import { InputTheme } from './components/input';
+import { TextareaTheme } from './components/text-area';
 
 export const theme = extendTheme({
   semanticTokens,
@@ -33,5 +34,6 @@ export const theme = extendTheme({
     Link: TextTheme,
     Button: ButtonTheme,
     Input: InputTheme,
+    Textarea: TextareaTheme,
   },
 });

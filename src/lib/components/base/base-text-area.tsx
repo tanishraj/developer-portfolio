@@ -5,11 +5,11 @@ import {
   FormErrorMessage,
   FormHelperText,
   FormLabel,
-  Input,
-  InputProps,
+  Textarea,
+  TextareaProps,
 } from '@chakra-ui/react';
 
-interface TextBoxProps extends InputProps {
+interface BaseTextareaProps extends TextareaProps {
   isError?: boolean;
   label?: string;
   value?: string;
@@ -19,8 +19,8 @@ interface TextBoxProps extends InputProps {
   formControlProps?: FormControlProps;
 }
 
-export const Textbox = forwardRef(
-  (props: TextBoxProps, ref: ForwardedRef<HTMLInputElement>) => {
+export const BaseTextarea = forwardRef(
+  (props: BaseTextareaProps, ref: ForwardedRef<HTMLTextAreaElement>) => {
     const {
       label,
       helperText,
@@ -39,9 +39,8 @@ export const Textbox = forwardRef(
         {...formControlProps}
       >
         <FormLabel size={size}>{label}</FormLabel>
-        <Input
+        <Textarea
           ref={ref}
-          type={type}
           value={value}
           {...restProps}
         />
