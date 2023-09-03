@@ -53,50 +53,76 @@ export const JourneySection = () => {
         <Path
           myJourney={myJourneyData}
           position='relative'
-          height={'400px'}
-          pathStyle={{ color: 'white' }}
+          height={{ base: 'auto', md: '400px' }}
+          pathStyle={{ color: '#444', display: { base: 'none', md: 'block' } }}
+          flexDirection={{ base: 'column-reverse', md: 'row' }}
+          rowGap={{ base: 'sm', md: 'auto' }}
           hexagonProps={{
+            display: { base: 'none', md: 'block' },
             size: { base: '50px', md: '50px' },
             outlineSize: '5px',
             hexagonStyles: {
-              iconStyle: { bgColor: '#b4b3b5' },
-              borderStyle: { bgColor: '#dddddd' },
+              iconStyle: { bgColor: '#444' },
+              borderStyle: { bgColor: '#777' },
               animationStyle: { bgColor: '#fff' },
             },
           }}
-          chipsStyle={{ minWidth: { base: '195px' } }}
+          chipsStyle={{
+            minWidth: { base: '195px' },
+            width: { base: '100%', md: 'auto' },
+          }}
           chipContainerStyle={{
-            ':nth-child(odd) div.chips': {
-              position: 'absolute',
+            width: { base: '100%', md: 'auto' },
+            ':nth-of-type(odd) div.chips': {
+              position: { base: 'static', md: 'absolute' },
               left: '50%',
               bottom: '100%',
-              transform: 'translate(-20px, -50px)',
+              transform: { base: 'none', md: 'translate(-20px, -50px)' },
             },
-            ':nth-child(even) div.chips': {
-              position: 'absolute',
+            ':nth-of-type(even) div.chips': {
+              position: { base: 'static', md: 'absolute' },
               right: '50%',
-              transform: 'translate(20px, 50px)',
+              transform: { base: 'none', md: 'translate(20px, 50px)' },
             },
-
-            ':nth-child(odd) div.connectionLine::before': {
+            ':nth-of-type(odd) div.connectionLine::before': {
               content: '""',
               position: 'absolute',
-              borderLeft: '1px solid white',
+              borderLeft: '1px solid #444',
               height: '100%',
               bottom: '100%',
               left: 'calc(50% - 0.5px)',
+              display: { base: 'none', md: 'block' },
             },
-            ':nth-child(even) div.connectionLine::before': {
+            ':nth-of-type(even) div.connectionLine::before': {
               content: '""',
               position: 'absolute',
-              borderLeft: '1px solid white',
+              borderLeft: '1px solid #444',
               height: '100%',
               top: '100%',
               left: 'calc(50% - 0.5px)',
+              display: { base: 'none', md: 'block' },
+            },
+            'div.chips>div': {
+              color: '#444',
+              borderColor: 'whiteAlpha.500',
             },
             ':last-child div.chips>div': {
-              color: 'red',
-              borderColor: 'red',
+              color: 'white',
+              borderColor: 'white',
+            },
+            ':last-child div.connectionLine::before': {
+              borderColor: 'white',
+            },
+            ':last-child div.hexagon': {
+              'div:nth-of-type(1)': {
+                bgColor: '#ccc',
+              },
+              'div:nth-of-type(2)': {
+                bgColor: 'white',
+              },
+              'div:nth-of-type(3)': {
+                bgColor: '#ccc',
+              },
             },
           }}
         />

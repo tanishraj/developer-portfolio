@@ -1,12 +1,4 @@
-import {
-  Container,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Textarea,
-  Text,
-} from '@chakra-ui/react';
+import { Container, Flex, Grid, GridItem, Heading } from '@chakra-ui/react';
 import { Textbox } from '../../../components/base/text-box';
 import { RiMailFill } from 'react-icons/ri';
 import { BaseButton } from '../../../components/base/base-button';
