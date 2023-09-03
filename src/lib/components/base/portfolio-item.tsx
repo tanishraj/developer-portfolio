@@ -18,12 +18,14 @@ export const PortfolioItem = (itemProps: ItemPropsType) => {
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
       cursor='pointer'
+      _hover={{ border: '4px solid', borderColor: 'purple' }}
     >
       {isHovered && (
         <Heading
           color='white'
           zIndex={2}
           position='absolute'
+          width='200px'
         >
           {text}
         </Heading>

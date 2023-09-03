@@ -37,7 +37,7 @@ export const PortfolioSection = () => {
           />
           <PortfolioItem
             cols={1}
-            rows={2}
+            rows={{ base: 1, md: 2 }}
             imgSrc='./public/assets/images/project-6.jpg'
             text='Responsive IOS Application'
           />
