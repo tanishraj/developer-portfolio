@@ -19,49 +19,43 @@ export const PortfolioSection = () => {
           Portfolio
         </Heading>
         <Grid
-          templateRows={{ base: 'repeat(4, 1fr)', md: 'repeat(2, 1fr)' }}
-          templateColumns={{ base: 'repeat(3, 1fr)', md: 'repeat(6, 1fr)' }}
-          gap={2}
+          gridTemplateColumns='repeat(auto-fit, min-max(200px, 1fr))'
+          gridGap='2xs'
+          gridAutoRows='200px'
+          gridAutoFlow='dense'
         >
           <PortfolioItem
             cols={1}
             rows={1}
             imgSrc='./public/assets/images/project-1.jpg'
             text='Responsive Web Application'
+            gridArea={{ base: 'auto', md: '1/1/2/1' }}
           />
           <PortfolioItem
-            cols={1}
-            rows={1}
             imgSrc='./public/assets/images/project-2.jpg'
             text='Responsive Mobile Application'
+            gridArea={{ base: 'auto', md: '1/2/3/3' }}
           />
           <PortfolioItem
-            cols={1}
-            rows={{ base: 1, md: 2 }}
             imgSrc='./public/assets/images/project-6.jpg'
             text='Responsive IOS Application'
+            gridArea={{ base: 'auto', md: '2/1/4/2' }}
           />
           <PortfolioItem
-            cols={3}
-            rows={1}
             imgSrc='./public/assets/images/project-4.jpg'
             text='Responsive Web Application'
+            gridArea={{ base: 'auto', md: '1/3/2/4' }}
           />
           <PortfolioItem
-            cols={2}
-            rows={1}
             imgSrc='./public/assets/images/project-5.jpg'
             text='Responsive Web3 Application'
+            gridArea={{ base: 'auto', md: '2/3/3/4' }}
           />
           <PortfolioItem
-            cols={1}
-            rows={1}
             imgSrc='./public/assets/images/project-3.jpg'
             text='Responsive Blockchain Application'
           />
           <PortfolioItem
-            cols={{ base: 3, md: 2 }}
-            rows={1}
             imgSrc='./public/assets/images/project-7.jpg'
             text='Responsive Web Application'
           />

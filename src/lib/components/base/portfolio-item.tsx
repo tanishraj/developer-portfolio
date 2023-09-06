@@ -1,41 +1,64 @@
-import { GridItem, ResponsiveValue, Image, Heading } from '@chakra-ui/react';
-import { useState } from 'react';
+import {
+  GridItem,
+  ResponsiveValue,
+  Image,
+  GridItemProps,
+  Flex,
+  Text,
+  Button,
+} from '@chakra-ui/react';
 
-type ItemPropsType = {
-  cols: ResponsiveValue<number>;
-  rows: ResponsiveValue<number>;
+interface ItemPropsType extends GridItemProps {
+  cols?: ResponsiveValue<number>;
+  rows?: ResponsiveValue<number>;
   imgSrc: string;
-  text: string;
-};
+  text?: string;
+}
 
 export const PortfolioItem = (itemProps: ItemPropsType) => {
-  const { cols, rows, imgSrc, text } = itemProps;
-  const [isHovered, setIsHovered] = useState(false);
+  const { cols, rows, imgSrc, text, ...restProps } = itemProps;
+
   return (
     <GridItem
+      position='relative'
       colSpan={cols}
       rowSpan={rows}
-      onMouseOver={() => setIsHovered(true)}
-      onMouseOut={() => setIsHovered(false)}
       cursor='pointer'
-      _hover={{ border: '4px solid', borderColor: 'purple' }}
+      {...restProps}
+      _hover={{
+        '.overlayContent': {
+          display: 'flex',
+        },
+      }}
     >
-      {isHovered && (
-        <Heading
-          color='white'
-          zIndex={2}
-          position='absolute'
-          width='200px'
-        >
-          {text}
-        </Heading>
-      )}
       <Image
         src={imgSrc}
         height='100%'
         width='100%'
         objectFit='cover'
       />
+      <Flex
+        className='overlayContent'
+        width='full'
+        height='full'
+        flex='1'
+        flexDirection='column'
+        alignItems='center'
+        justifyContent='center'
+        position='absolute'
+        backgroundColor='blackAlpha.500'
+        top='50%'
+        left='50%'
+        transform='translate(-50%, -50%)'
+        display='none'
+      >
+        <Text
+          as='h3'
+          size='md-desktop'
+        >
+          Project Title
+        </Text>
+      </Flex>
     </GridItem>
   );
 };
