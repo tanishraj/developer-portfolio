@@ -1,35 +1,5 @@
 import { Container, Flex, Text, Heading } from '@chakra-ui/react';
-import { HtmlIcon } from '../../../assets/svg/html-icon';
-import { CssIcon } from '../../../assets/svg/css-icon';
-import { JavascriptIcon } from '../../../assets/svg/javascript-icon';
-import { TypescriptIcon } from '../../../assets/svg/typescript-icon';
-import { ReactIcon } from '../../../assets/svg/react-icon';
-import { VueJsIcon } from '../../../assets/svg/vue-js-icon';
-import { NextJsIcon } from '../../../assets/svg/next-js-icon';
-import { NodeJsIcon } from '../../../assets/svg/node-js-icon';
-import { MaterialUiIcon } from '../../../assets/svg/material-ui-icon';
-import { WebpackIcon } from '../../../assets/svg/webpack-icon';
-import { ScssIcon } from '../../../assets/svg/scss-icon';
-import { ReduxIcon } from '../../../assets/svg/redux-icon';
-import { LessIcon } from '../../../assets/svg/less-icon';
-import { JestIcon } from '../../../assets/svg/jest-icon';
-
-const iconMapper = {
-  Html: <HtmlIcon />,
-  Css: <CssIcon />,
-  Scss: <ScssIcon />,
-  Less: <LessIcon />,
-  Javascript: <JavascriptIcon />,
-  Typescript: <TypescriptIcon />,
-  React: <ReactIcon />,
-  Redux: <ReduxIcon />,
-  VueJs: <VueJsIcon />,
-  NextJs: <NextJsIcon />,
-  NodeJs: <NodeJsIcon />,
-  MaterialUi: <MaterialUiIcon />,
-  Webpack: <WebpackIcon />,
-  Jest: <JestIcon />,
-};
+import { iconMapper, IconName } from './icon-mapper';
 
 const skillSectionData = {
   title: 'My Skills',
@@ -130,7 +100,7 @@ export const SkillsSection = () => {
               transition='transform 0.3s'
               _hover={{ svg: { transform: 'scale(1.5)' } }}
             >
-              {iconMapper?.[skill.icon]}
+              {iconMapper?.[skill.icon as IconName]()}
               <Text size='sm'>{skill.name}</Text>
             </Flex>
           ))}
