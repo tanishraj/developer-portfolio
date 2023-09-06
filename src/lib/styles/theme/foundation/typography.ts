@@ -1,6 +1,6 @@
 import { toRem } from '../utils/to-rem';
 const fonts = {
-  body: 'barlow, system-ui, sans-serif',
+  body: "'Poppins', sans-serif",
   heading: 'archive, Georgia, serif',
   mono: 'Menlo, monospace',
 };
