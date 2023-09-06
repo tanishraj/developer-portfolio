@@ -53,7 +53,8 @@ export const ContactSection = () => {
               <BaseTextarea
                 label='Message'
                 resize={{ base: 'vertical', md: 'none' }}
-                height={{ base: 'auto', md: 'calc(100% - 51px)' }}
+                minHeight={{ base: 'auto', md: 'inherit' }}
+                height={{ base: '180px', md: 'calc(100% - 51px)' }}
               />
             </Flex>
           </GridItem>

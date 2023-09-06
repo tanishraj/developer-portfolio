@@ -7,6 +7,8 @@ const { definePartsStyle, defineMultiStyleConfig } =
 export const InputTheme = defineMultiStyleConfig({
   baseStyle: definePartsStyle({
     field: {
+      minWidth: '180px',
+      minHeight: '60px',
       borderRadius: 0,
       py: '3xs',
       px: '2xs',
@@ -41,8 +43,6 @@ export const InputTheme = defineMultiStyleConfig({
   sizes: {
     md: definePartsStyle({
       field: {
-        minWidth: '180px',
-        minHeight: '60px',
         fontSize: 'md',
         lineHeight: 'md',
         letterSpacing: 'md',
