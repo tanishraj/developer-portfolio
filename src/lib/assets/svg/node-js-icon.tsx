@@ -12,7 +12,7 @@ const sizes = {
 };
 
 export function NodeJsIcon(props: NodeJsIconProps) {
-  const { size = 'xl', color = 'teal.200', ...restProps } = props;
+  const { size = 'xl', color = 'white', ...restProps } = props;
   const { w, h } = sizes[size] ?? {};
 
   return (
