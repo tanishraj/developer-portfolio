@@ -14,64 +14,80 @@ import { ReduxIcon } from '../../../assets/svg/redux-icon';
 import { LessIcon } from '../../../assets/svg/less-icon';
 import { JestIcon } from '../../../assets/svg/jest-icon';
 
+const iconMapper = {
+  Html: <HtmlIcon />,
+  Css: <CssIcon />,
+  Scss: <ScssIcon />,
+  Less: <LessIcon />,
+  Javascript: <JavascriptIcon />,
+  Typescript: <TypescriptIcon />,
+  React: <ReactIcon />,
+  Redux: <ReduxIcon />,
+  VueJs: <VueJsIcon />,
+  NextJs: <NextJsIcon />,
+  NodeJs: <NodeJsIcon />,
+  MaterialUi: <MaterialUiIcon />,
+  Webpack: <WebpackIcon />,
+  Jest: <JestIcon />,
+};
+
 const skillSectionData = {
   title: 'My Skills',
   skillsList: [
     {
-      icon: '<HtmlIcon />',
+      icon: 'Html',
       name: 'HTML',
     },
     {
-      icon: '<CssIcon />',
+      icon: 'Css',
       name: 'CSS',
     },
     {
-      icon: '<ScssIcon />',
+      icon: 'Scss',
       name: 'Scss',
     },
     {
-      icon: '<LessIcon />',
+      icon: 'Less',
       name: 'less',
     },
-
     {
-      icon: '<JavascriptIcon />',
+      icon: 'Javascript',
       name: 'Javascript',
     },
     {
-      icon: '<TypescriptIcon />',
+      icon: 'Typescript',
       name: 'Typescript',
     },
     {
-      icon: '<ReactIcon />',
+      icon: 'React',
       name: 'React',
     },
     {
-      icon: '<ReduxIcon />',
+      icon: 'Redux',
       name: 'Redux',
     },
     {
-      icon: '<VueJsIcon />',
+      icon: 'VueJs',
       name: 'Vue',
     },
     {
-      icon: '<NextJsIcon />',
+      icon: 'NextJs',
       name: 'Next',
     },
     {
-      icon: '<NodeJsIcon />',
+      icon: 'NodeJs',
       name: 'Node',
     },
     {
-      icon: '<MaterialUiIcon />',
+      icon: 'MaterialUi',
       name: 'Material UI',
     },
     {
-      icon: '<WebpackIcon />',
+      icon: 'Webpack',
       name: 'Webpack',
     },
     {
-      icon: '<JestIcon />',
+      icon: 'Jest',
       name: 'jest',
     },
   ],
@@ -105,14 +121,17 @@ export const SkillsSection = () => {
               justifyContent='center'
               alignItems='center'
               padding='2xs'
-              width={{ base: '130px', md: '160px' }}
-              height={{ base: '130px', md: '160px' }}
+              width={{ base: '130px', md: '200px' }}
+              height={{ base: '130px', md: '200px' }}
               borderWidth='1px'
               borderStyle='solid'
+              rowGap='sm'
               borderColor='whiteAlpha.300'
+              transition='transform 0.3s'
+              _hover={{ svg: { transform: 'scale(1.5)' } }}
             >
-              {skill.icon}
-              <Text>{skill.name}</Text>
+              {iconMapper?.[skill.icon]}
+              <Text size='sm'>{skill.name}</Text>
             </Flex>
           ))}
         </Flex>
