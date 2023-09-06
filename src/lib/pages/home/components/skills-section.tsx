@@ -50,7 +50,6 @@ const skillSectionData = {
       icon: 'Less',
       name: 'less',
     },
-
     {
       icon: 'Javascript',
       name: 'Javascript',
