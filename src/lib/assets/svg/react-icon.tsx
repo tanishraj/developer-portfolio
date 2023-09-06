@@ -1,6 +1,6 @@
 import { chakra, Icon, IconProps } from '@chakra-ui/react';
 
-export interface ChakraIconProps extends IconProps {
+export interface ReactIconProps extends IconProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
@@ -11,7 +11,7 @@ const sizes = {
   xl: { w: '52px', h: '36px' },
 };
 
-export function ChakraIcon(props: ChakraIconProps) {
+export function ReactIcon(props: ReactIconProps) {
   const { size = 'xl', color = 'teal.200', ...restProps } = props;
   const { w, h } = sizes[size] ?? {};
 
