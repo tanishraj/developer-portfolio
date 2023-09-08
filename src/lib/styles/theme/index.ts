@@ -11,6 +11,7 @@ import { TextTheme } from './components/text';
 import { ButtonTheme } from './components/button';
 import { TextboxTheme } from './components/text-box';
 import { TextareaTheme } from './components/text-area';
+import { FormLabelTheme } from './components/form-label';
 
 export const theme = extendTheme({
   semanticTokens,
@@ -35,6 +36,6 @@ export const theme = extendTheme({
     Button: ButtonTheme,
     Input: TextboxTheme,
     Textarea: TextareaTheme,
-    FormLabel: TextTheme,
+    FormLabel: FormLabelTheme,
   },
 });
