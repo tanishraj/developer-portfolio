@@ -46,7 +46,7 @@ export const JourneySection = () => {
       >
         <Heading
           mb={{ base: '5xl', md: '2xl' }}
-          size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
+          size='page-title'
         >
           My Expertise
         </Heading>
@@ -68,7 +68,7 @@ export const JourneySection = () => {
             },
           }}
           chipsStyle={{
-            minWidth: { base: '195px' },
+            minWidth: { base: '100%', md: '190px', lg: '260px' },
             width: { base: '100%', md: 'auto' },
           }}
           chipContainerStyle={{

@@ -12,7 +12,7 @@ export const AboutSection = () => {
       >
         <Heading
           mb='2xl'
-          size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
+          size='page-title'
         >
           About Me
         </Heading>
@@ -33,7 +33,7 @@ export const AboutSection = () => {
           >
             <Text
               as='p'
-              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
+              size='md-para'
             >
               "Hello, I'm Tanish. I discovered my passion for coding during my
               time at , where I obtained my degree in Master of Computer
@@ -44,7 +44,7 @@ export const AboutSection = () => {
             </Text>
             <Text
               as='p'
-              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
+              size='md-para'
             >
               Specialising in React and Vue.js, I pride myself on my attention
               to detail, problem-solving capabilities, and a keen eye for
@@ -54,7 +54,7 @@ export const AboutSection = () => {
             </Text>
             <Text
               as='p'
-              size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
+              size='md-para'
             >
               When I'm not coding, you'll find me playing some indoor and
               outdoor games.

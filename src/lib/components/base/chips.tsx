@@ -26,14 +26,15 @@ export const Chips = (chipsProps: ChipsProps) => {
     >
       <Text
         as='h3'
-        size='sm'
+        size='sm-para'
+        fontWeight='bold'
         {...customStyle?.headingStyle}
       >
         {title}
       </Text>
       <Text
         as='p'
-        size='xs'
+        size='sm-para'
         {...customStyle?.descriptionStyle}
       >
         {description}

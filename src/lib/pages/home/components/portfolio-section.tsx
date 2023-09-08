@@ -14,7 +14,7 @@ export const PortfolioSection = () => {
       >
         <Heading
           mb={{ base: '5xl', md: '2xl' }}
-          size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
+          size='page-title'
         >
           Portfolio
         </Heading>

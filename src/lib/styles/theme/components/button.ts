@@ -35,9 +35,7 @@ export const ButtonTheme = defineStyleConfig({
     md: {
       minWidth: '180px',
       minHeight: '60px',
-      fontSize: 'md',
-      lineHeight: 'md',
-      letterSpacing: 'md',
+      size: 'sm-button',
     },
   },
   defaultProps: {
