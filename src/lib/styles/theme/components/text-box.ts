@@ -4,7 +4,7 @@ import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(inputAnatomy.keys);
 
-export const InputTheme = defineMultiStyleConfig({
+export const TextboxTheme = defineMultiStyleConfig({
   baseStyle: definePartsStyle({
     field: {
       minWidth: '180px',
