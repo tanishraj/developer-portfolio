@@ -9,7 +9,7 @@ import { semanticTokens } from './tokens';
 import { ContainerTheme } from './components/container';
 import { TextTheme } from './components/text';
 import { ButtonTheme } from './components/button';
-import { InputTheme } from './components/input';
+import { TextboxTheme } from './components/text-box';
 import { TextareaTheme } from './components/text-area';
 
 export const theme = extendTheme({
@@ -33,7 +33,8 @@ export const theme = extendTheme({
     Heading: TextTheme,
     Link: TextTheme,
     Button: ButtonTheme,
-    Input: InputTheme,
+    Input: TextboxTheme,
     Textarea: TextareaTheme,
+    FormLabel: TextTheme,
   },
 });

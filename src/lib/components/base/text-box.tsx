@@ -3,8 +3,11 @@ import {
   FormControl,
   FormControlProps,
   FormErrorMessage,
+  FormErrorMessageProps,
   FormHelperText,
+  FormHelperTextProps,
   FormLabel,
+  FormLabelProps,
   Input,
   InputProps,
 } from '@chakra-ui/react';
@@ -17,6 +20,9 @@ interface TextBoxProps extends InputProps {
   errorMessage?: string;
   type?: string;
   formControlProps?: FormControlProps;
+  formLabelProps?: FormLabelProps;
+  formHelperTextProps?: FormHelperTextProps;
+  formErrorMessageProps?: FormErrorMessageProps;
 }
 
 export const Textbox = forwardRef(
@@ -30,6 +36,9 @@ export const Textbox = forwardRef(
       type = 'text',
       size,
       formControlProps,
+      formLabelProps,
+      formHelperTextProps,
+      formErrorMessageProps,
       ...restProps
     } = props ?? {};
 
@@ -38,7 +47,12 @@ export const Textbox = forwardRef(
         isInvalid={isError}
         {...formControlProps}
       >
-        <FormLabel size={size}>{label}</FormLabel>
+        <FormLabel
+          size={size}
+          {...formLabelProps}
+        >
+          {label}
+        </FormLabel>
         <Input
           ref={ref}
           type={type}
