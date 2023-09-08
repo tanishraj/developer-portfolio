@@ -54,7 +54,7 @@ export const PortfolioItem = (itemProps: ItemPropsType) => {
       >
         <Text
           as='h3'
-          size='md-desktop'
+          size='md-para'
         >
           Project Title
         </Text>

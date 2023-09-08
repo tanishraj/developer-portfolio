@@ -76,7 +76,7 @@ export const SkillsSection = () => {
       >
         <Heading
           mb='2xl'
-          size={{ base: 'md-desktop', md: 'lg-desktop', lg: 'xl-desktop' }}
+          size='page-title'
         >
           My Skills
         </Heading>
@@ -90,9 +90,10 @@ export const SkillsSection = () => {
               flexDirection='column'
               justifyContent='center'
               alignItems='center'
+              textAlign='center'
               padding='2xs'
-              width={{ base: '130px', md: '200px' }}
-              height={{ base: '130px', md: '200px' }}
+              width={{ base: '150px', md: '220px' }}
+              height={{ base: '150px', md: '220px' }}
               borderWidth='1px'
               borderStyle='solid'
               rowGap='sm'
@@ -100,8 +101,8 @@ export const SkillsSection = () => {
               transition='transform 0.3s'
               _hover={{ svg: { transform: 'scale(1.5)' } }}
             >
-              {iconMapper?.[skill.icon as IconName]()}
-              <Text size='sm'>{skill.name}</Text>
+              {iconMapper?.[skill.icon as IconName]({ h: '60px', w: '60px' })}
+              <Text size='sm-para'>{skill.name}</Text>
             </Flex>
           ))}
         </Flex>

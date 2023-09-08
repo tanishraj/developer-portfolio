@@ -59,19 +59,14 @@ export const Card = (cardProps: CardPropsType) => {
         as='h2'
         fontFamily='barlow'
         fontWeight={700}
-        size={{
-          base: 'md-mobile',
-          md: 'lg-mobile',
-          lg: 'xl-mobile',
-          xl: 'lg-desktop',
-        }}
+        size='card-title'
         {...customStyles?.titleStyle}
       >
         {title}
       </Heading>
       <Text
         as='p'
-        size={{ base: 'sm', md: 'md-mobile', lg: 'lg-mobile' }}
+        size='md-para'
         {...customStyles?.descriptionStyle}
       >
         {description}
