@@ -65,61 +65,78 @@ export const TextTheme: ComponentStyleConfig = {
 
     '2xs': {
       fontSize: '2xs',
-      lineHeight: '2xs',
-      letterSpacing: 'md',
+      lineHeight: 'md',
+      letterSpacing: 'normal',
     },
+
     xs: {
       fontSize: 'xs',
-      lineHeight: 'xs',
-      letterSpacing: 'md',
+      lineHeight: 'lg',
+      letterSpacing: 'normal',
     },
-    sm: {
-      fontSize: 'sm',
-      lineHeight: 'md',
-      letterSpacing: 'lg',
-    },
-    'md-desktop': {
-      fontSize: 'xl',
-      lineHeight: 'xl',
-      letterSpacing: 'md',
-    },
-    'lg-desktop': {
-      fontSize: '3xl',
-      lineHeight: '3xl',
-      letterSpacing: 'sm',
-    },
-    'xl-desktop': {
-      fontSize: '4xl',
-      lineHeight: '4xl',
-      letterSpacing: 'xs',
-    },
-    '2xl-desktop': {
-      fontSize: '5xl',
-      lineHeight: '5xl',
-      letterSpacing: '2xs',
-    },
-    'md-mobile': {
+
+    md: {
       fontSize: 'md',
-      lineHeight: 'lg',
-      letterSpacing: 'lg',
+      lineHeight: 'xl',
+      letterSpacing: 'normal',
     },
-    'lg-mobile': {
+
+    lg: {
       fontSize: 'lg',
-      lineHeight: 'lg',
-      letterSpacing: 'lg',
+      lineHeight: 'xl',
+      letterSpacing: 'normal',
     },
-    'xl-mobile': {
-      fontSize: '2xl',
+
+    xl: {
+      fontSize: 'xl',
       lineHeight: '2xl',
-      letterSpacing: 'md',
+      letterSpacing: 'normal',
     },
-    '2xl-mobile': {
-      fontSize: '3xl',
+
+    '2xl': {
+      fontSize: '2xl',
       lineHeight: '3xl',
-      letterSpacing: 'md',
+      letterSpacing: 'normal',
+    },
+
+    '3xl': {
+      fontSize: '3xl',
+      lineHeight: '4xl',
+      letterSpacing: 'normal',
+    },
+
+    '4xl': {
+      fontSize: '4xl',
+      lineHeight: '5xl',
+      letterSpacing: 'normal',
+    },
+
+    '5xl': {
+      fontSize: '5xl',
+      lineHeight: '6xl',
+      letterSpacing: 'normal',
+    },
+
+    '6xl': {
+      fontSize: '6xl',
+      lineHeight: '7xl',
+      letterSpacing: 'normal',
+    },
+
+    '7xl': {
+      fontSize: '7xl',
+      lineHeight: '8xl',
+      letterSpacing: 'normal',
+    },
+
+    '8xl': {
+      fontSize: '8xl',
+      lineHeight: '9xl',
+      letterSpacing: 'normal',
     },
   },
+
   defaultProps: {
-    size: 'xs',
+    size: '2xs',
   },
 };
