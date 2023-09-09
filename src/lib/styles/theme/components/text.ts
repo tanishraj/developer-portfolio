@@ -75,6 +75,12 @@ export const TextTheme: ComponentStyleConfig = {
       letterSpacing: 'normal',
     },
 
+    sm: {
+      fontSize: 'sm',
+      lineHeight: 'md',
+      letterSpacing: 'normal',
+    },
+
     md: {
       fontSize: 'md',
       lineHeight: 'xl',

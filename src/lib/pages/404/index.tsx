@@ -1,7 +1,10 @@
 import {
   Box,
   Button,
+  Container,
+  Flex,
   Grid,
+  GridItem,
   Heading,
   Image,
   Link,
@@ -15,39 +18,56 @@ const Page404 = () => {
   const handleBackToHome = () => navigate('/');
 
   return (
-    <Grid
-      gap={4}
-      textAlign='center'
-    >
-      <Heading>Page not Found</Heading>
-
-      <Box
-        maxWidth={[280, 400]}
-        marginX='auto'
+    <Container>
+      <Flex
+        flex='1'
+        height='full'
+        flexFlow='column'
+        justifyContent='center'
+        minHeight='100vh'
+        p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
-        <Image
-          width={400}
-          src='/assets/images/404 Error-rafiki.svg'
-        />
-        <Link
-          fontSize='xs'
-          href='https://stories.freepik.com/web'
-          isExternal
+        <Grid
+          gap={'xl'}
+          textAlign='center'
         >
-          Illustration by Freepik Stories
-        </Link>
-      </Box>
-
-      <Box>
-        <Text>It&apos;s Okay!</Text>
-        <Button
-          mt='xs'
-          onClick={handleBackToHome}
-        >
-          Let&apos;s Head Back
-        </Button>
-      </Box>
-    </Grid>
+          <GridItem>
+            <Heading
+              as='h1'
+              textTransform='uppercase'
+              size={{ base: '2xl', md: '3xl', lg: '4xl' }}
+            >
+              Page Not Found
+            </Heading>
+          </GridItem>
+          <GridItem>
+            <Box
+              maxWidth={[280, 400]}
+              marginX='auto'
+            >
+              <Image
+                width={400}
+                src='/assets/images/404-error.svg'
+              />
+            </Box>
+          </GridItem>
+          <GridItem>
+            <Box>
+              <Text size={{ base: '2xs', md: 'xs', lg: 'xs', xl: 'sm' }}>
+                It&apos;s Okay!
+              </Text>
+              <Button
+                mt='xs'
+                onClick={handleBackToHome}
+                size='md'
+              >
+                Let&apos;s Head Back
+              </Button>
+            </Box>
+          </GridItem>
+        </Grid>
+      </Flex>
+    </Container>
   );
 };
 
