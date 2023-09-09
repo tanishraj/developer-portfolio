@@ -36,10 +36,9 @@ export const Card = (cardProps: CardPropsType) => {
       {...restProps}
     >
       {cardIndex && (
-        <Text
+        <Box
           as='div'
           display='block'
-          size={{ base: '6xl', md: '7xl', lg: '8xl', xl: '8xl' }}
           position='absolute'
           right={{ base: 'auto', md: '-25px', lg: 'auto', xl: 'auto' }}
           left={{ base: '-16px', md: 'auto', lg: '-25px', xl: '-67px' }}
@@ -47,8 +46,10 @@ export const Card = (cardProps: CardPropsType) => {
           lineHeight='1'
           opacity='0.1'
         >
-          {`0${cardIndex}`}
-        </Text>
+          <Text
+            size={{ base: '6xl', md: '7xl', lg: '8xl', xl: '8xl' }}
+          >{`0${cardIndex}`}</Text>
+        </Box>
       )}
       <Heading
         as='h2'
