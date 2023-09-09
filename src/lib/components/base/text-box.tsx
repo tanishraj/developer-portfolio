@@ -34,7 +34,7 @@ export const Textbox = forwardRef(
       isError,
       value,
       type = 'text',
-      size,
+      size = 'md',
       formControlProps,
       formLabelProps,
       formHelperTextProps,
