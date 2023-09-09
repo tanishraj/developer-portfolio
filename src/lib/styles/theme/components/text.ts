@@ -95,42 +95,49 @@ export const TextTheme: ComponentStyleConfig = {
 
     '2xl': {
       fontSize: '2xl',
+      fontWeight: 'bold',
       lineHeight: '3xl',
       letterSpacing: 'normal',
     },
 
     '3xl': {
       fontSize: '3xl',
+      fontWeight: 'bold',
       lineHeight: '4xl',
       letterSpacing: 'normal',
     },
 
     '4xl': {
       fontSize: '4xl',
+      fontWeight: 'bold',
       lineHeight: '5xl',
       letterSpacing: 'normal',
     },
 
     '5xl': {
       fontSize: '5xl',
+      fontWeight: 'bold',
       lineHeight: '6xl',
       letterSpacing: 'normal',
     },
 
     '6xl': {
       fontSize: '6xl',
+      fontWeight: 'bold',
       lineHeight: '7xl',
       letterSpacing: 'normal',
     },
 
     '7xl': {
       fontSize: '7xl',
+      fontWeight: 'bold',
       lineHeight: '8xl',
       letterSpacing: 'normal',
     },
 
     '8xl': {
       fontSize: '8xl',
+      fontWeight: 'bold',
       lineHeight: '9xl',
       letterSpacing: 'normal',
     },

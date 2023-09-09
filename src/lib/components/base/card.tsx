@@ -36,24 +36,19 @@ export const Card = (cardProps: CardPropsType) => {
       {...restProps}
     >
       {cardIndex && (
-        <Box
+        <Text
+          as='div'
+          display='block'
+          size={{ base: '6xl', md: '7xl', lg: '8xl', xl: '8xl' }}
           position='absolute'
-          fontFamily='mulish'
-          fontWeight='700'
-          fontSize={{ base: '6xl', md: '8xl', lg: '10xl' }}
-          left={{ base: '0', md: '0', lg: '0', xl: '40%' }}
-          top={{ base: '0', md: '17%', lg: '19%', xl: '20%' }}
-          transform={{
-            base: 'translate(0, -60%)',
-            md: 'translate(0, -100%)',
-            lg: 'translate(0, -100%)',
-            xl: 'translate(-100%, -100%)',
-          }}
+          right={{ base: 'auto', md: '-25px', lg: '-25px', xl: '-67px' }}
+          left={{ base: '-16px', md: 'auto', lg: 'auto', xl: '-67px' }}
+          top={{ base: '-77px', md: '-96px', lg: '-114px', xl: '-114px' }}
           lineHeight='1'
           opacity='0.1'
         >
           {`0${cardIndex}`}
-        </Box>
+        </Text>
       )}
       <Heading
         as='h2'
