@@ -83,7 +83,7 @@ export const SkillsSection = () => {
         <Flex
           flexWrap='wrap'
           justifyContent='center'
-          gap='xs'
+          gap='3xs'
         >
           {skillSectionData.skillsList.map((skill, index) => (
             <Flex
