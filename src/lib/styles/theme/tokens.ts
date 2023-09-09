@@ -14,8 +14,8 @@ export const semanticTokens: Omit<Theme['semanticTokens'], 'colors'> = {
       _dark: 'black',
     },
     'chakra-border-color': {
-      _light: 'black',
-      _dark: 'white',
+      _light: 'rgba(0,0,0,0.2)',
+      _dark: 'rgba(255,255,255,0.2)',
     },
   },
   sizes: {

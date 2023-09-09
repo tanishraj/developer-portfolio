@@ -29,7 +29,7 @@ export const Card = (cardProps: CardPropsType) => {
     <Flex
       position='relative'
       p='lg'
-      border='1px solid rgba(255,255,255,0.2)'
+      border='1px solid'
       flex={1}
       flexFlow='column'
       gap={{ base: 'sm', md: 'xl', lg: '2xl' }}
@@ -53,8 +53,6 @@ export const Card = (cardProps: CardPropsType) => {
       )}
       <Heading
         as='h2'
-        fontFamily='barlow'
-        fontWeight={700}
         size='card-title'
         {...customStyles?.titleStyle}
       >
