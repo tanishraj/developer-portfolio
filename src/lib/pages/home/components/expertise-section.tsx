@@ -29,7 +29,8 @@ export const ExpertiseSection = () => {
         p={{ base: '2xs', md: 'sm', lg: 'lg', xl: 'xl' }}
       >
         <Heading
-          mb={{ base: '5xl', md: '2xl' }}
+          pb={{ base: '5xl', md: '2xl' }}
+          mb={{ base: '43px', md: '60px', lg: '72px', xl: '72px' }}
           size='page-title'
         >
           My Expertise
