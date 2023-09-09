@@ -41,8 +41,8 @@ export const Card = (cardProps: CardPropsType) => {
           display='block'
           size={{ base: '6xl', md: '7xl', lg: '8xl', xl: '8xl' }}
           position='absolute'
-          right={{ base: 'auto', md: '-25px', lg: '-25px', xl: '-67px' }}
-          left={{ base: '-16px', md: 'auto', lg: 'auto', xl: '-67px' }}
+          right={{ base: 'auto', md: '-25px', lg: 'auto', xl: 'auto' }}
+          left={{ base: '-16px', md: 'auto', lg: '-25px', xl: '-67px' }}
           top={{ base: '-77px', md: '-96px', lg: '-114px', xl: '-114px' }}
           lineHeight='1'
           opacity='0.1'
