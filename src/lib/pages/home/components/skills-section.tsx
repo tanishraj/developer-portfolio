@@ -83,6 +83,7 @@ export const SkillsSection = () => {
         <Flex
           flexWrap='wrap'
           justifyContent='center'
+          gap='xs'
         >
           {skillSectionData.skillsList.map((skill, index) => (
             <Flex
@@ -94,10 +95,8 @@ export const SkillsSection = () => {
               padding='2xs'
               width={{ base: '150px', md: '220px' }}
               height={{ base: '150px', md: '220px' }}
-              borderWidth='1px'
-              borderStyle='solid'
+              border='1px solid'
               rowGap='sm'
-              borderColor='whiteAlpha.300'
               transition='transform 0.3s'
               _hover={{ svg: { transform: 'scale(1.5)' } }}
             >

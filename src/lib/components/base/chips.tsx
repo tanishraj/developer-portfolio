@@ -16,7 +16,7 @@ export const Chips = (chipsProps: ChipsProps) => {
   return (
     <Flex
       padding='xs'
-      border='1px solid #fff'
+      border='1px solid'
       flex={1}
       flexDirection='column'
       justifyContent='center'

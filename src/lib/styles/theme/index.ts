@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react';
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 import { colors } from './foundation/colors';
 import { typography } from './foundation/typography';
 import { breakpoints } from './foundation/breakpoints';
@@ -13,7 +13,13 @@ import { TextboxTheme } from './components/text-box';
 import { TextareaTheme } from './components/text-area';
 import { FormLabelTheme } from './components/form-label';
 
+const config: ThemeConfig = {
+  initialColorMode: 'light',
+  useSystemColorMode: false,
+};
+
 export const theme = extendTheme({
+  config,
   semanticTokens,
   colors,
   breakpoints,
