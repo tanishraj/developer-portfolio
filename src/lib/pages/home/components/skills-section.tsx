@@ -1,4 +1,4 @@
-import { Container, Flex, Text, Heading } from '@chakra-ui/react';
+import { Container, Flex, Text, Heading, useColorMode } from '@chakra-ui/react';
 import { iconMapper, IconName } from './icon-mapper';
 
 const skillSectionData = {
@@ -64,6 +64,8 @@ const skillSectionData = {
 };
 
 export const SkillsSection = () => {
+  const { colorMode } = useColorMode();
+
   return (
     <Container>
       <Flex
@@ -100,7 +102,11 @@ export const SkillsSection = () => {
               transition='transform 0.3s'
               _hover={{ svg: { transform: 'scale(1.5)' } }}
             >
-              {iconMapper?.[skill.icon as IconName]({ h: '60px', w: '60px' })}
+              {iconMapper?.[skill.icon as IconName]({
+                h: '60px',
+                w: '60px',
+                color: colorMode === 'light' ? 'black' : 'white',
+              })}
               <Text size='sm-para'>{skill.name}</Text>
             </Flex>
           ))}
