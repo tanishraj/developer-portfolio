@@ -1,4 +1,10 @@
-import { Container, Flex, Heading } from '@chakra-ui/react';
+import {
+  Container,
+  Flex,
+  Heading,
+  useColorMode,
+  useTheme,
+} from '@chakra-ui/react';
 import { Path } from '../../../components/base/path';
 
 export const myJourneyData = [
@@ -34,6 +40,11 @@ export const myJourneyData = [
   },
 ];
 export const JourneySection = () => {
+  const { colorMode } = useColorMode();
+  const theme = useTheme();
+
+  const borderColor = theme.colors.borderColor[colorMode];
+
   return (
     <Container>
       <Flex
@@ -87,7 +98,8 @@ export const JourneySection = () => {
             ':nth-of-type(odd) div.connectionLine::before': {
               content: '""',
               position: 'absolute',
-              borderLeft: '1px solid #444',
+              borderLeft: '1px solid',
+              borderColor: borderColor,
               height: '100%',
               bottom: '100%',
               left: 'calc(50% - 0.5px)',
@@ -96,22 +108,23 @@ export const JourneySection = () => {
             ':nth-of-type(even) div.connectionLine::before': {
               content: '""',
               position: 'absolute',
-              borderLeft: '1px solid #444',
+              borderLeft: '1px solid',
+              borderColor: borderColor,
               height: '100%',
               top: '100%',
               left: 'calc(50% - 0.5px)',
               display: { base: 'none', md: 'block' },
             },
             'div.chips>div': {
-              color: '#444',
-              borderColor: 'whiteAlpha.500',
+              color: borderColor,
+              borderColor: borderColor,
             },
             ':last-child div.chips>div': {
-              color: 'white',
-              borderColor: 'white',
+              color: colorMode === 'light' ? 'black' : 'white',
+              borderColor: colorMode === 'light' ? 'black' : 'white',
             },
             ':last-child div.connectionLine::before': {
-              borderColor: 'white',
+              borderColor: colorMode === 'light' ? 'black' : 'white',
             },
             ':last-child div.hexagon': {
               'div:nth-of-type(1)': {
