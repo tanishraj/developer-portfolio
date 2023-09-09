@@ -5,7 +5,6 @@ import {
   GridItemProps,
   Flex,
   Text,
-  Button,
 } from '@chakra-ui/react';
 
 interface ItemPropsType extends GridItemProps {
