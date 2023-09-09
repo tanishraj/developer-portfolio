@@ -1,6 +1,63 @@
 import { Container, Flex, Grid, Heading } from '@chakra-ui/react';
 import { PortfolioItem } from '../../../components/base/portfolio-item';
 
+const portfolioList = [
+  {
+    projectImage: {
+      url: '/assets/images/project-1.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+    gridArea: '1/1/2/1',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-2.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+    gridArea: '1/2/3/3',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-3.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+    gridArea: '2/1/4/2',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-4.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+    gridArea: '1/3/2/4',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-5.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+    gridArea: '2/3/3/4',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-6.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+  },
+  {
+    projectImage: {
+      url: '/assets/images/project-7.jpg',
+      alt: '',
+    },
+    projectName: 'Project Title',
+  },
+];
+
 export const PortfolioSection = () => {
   return (
     <Container>
@@ -24,41 +81,14 @@ export const PortfolioSection = () => {
           gridAutoRows='200px'
           gridAutoFlow='dense'
         >
-          <PortfolioItem
-            cols={1}
-            rows={1}
-            imgSrc='./public/assets/images/project-1.jpg'
-            text='Responsive Web Application'
-            gridArea={{ base: 'auto', md: '1/1/2/1' }}
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-2.jpg'
-            text='Responsive Mobile Application'
-            gridArea={{ base: 'auto', md: '1/2/3/3' }}
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-6.jpg'
-            text='Responsive IOS Application'
-            gridArea={{ base: 'auto', md: '2/1/4/2' }}
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-4.jpg'
-            text='Responsive Web Application'
-            gridArea={{ base: 'auto', md: '1/3/2/4' }}
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-5.jpg'
-            text='Responsive Web3 Application'
-            gridArea={{ base: 'auto', md: '2/3/3/4' }}
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-3.jpg'
-            text='Responsive Blockchain Application'
-          />
-          <PortfolioItem
-            imgSrc='./public/assets/images/project-7.jpg'
-            text='Responsive Web Application'
-          />
+          {portfolioList?.map(portfolio => (
+            <PortfolioItem
+              key={portfolio.projectName}
+              imgSrc={portfolio?.projectImage?.url}
+              text={portfolio?.projectName}
+              gridArea={{ base: 'auto', md: portfolio.gridArea || 'auto' }}
+            />
+          ))}
         </Grid>
       </Flex>
     </Container>
