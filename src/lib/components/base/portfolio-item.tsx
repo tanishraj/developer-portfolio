@@ -55,7 +55,7 @@ export const PortfolioItem = (itemProps: ItemPropsType) => {
           as='h3'
           size='md-para'
         >
-          Project Title
+          {text}
         </Text>
       </Flex>
     </GridItem>

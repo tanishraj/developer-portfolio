@@ -8,18 +8,22 @@ import { SkillsSection } from './components/skills-section';
 import { portfolioData } from '../../../data/portfolio-data';
 
 const Home = () => {
-  console.log('API DATA', portfolioData);
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <ExpertiseSection />
+      <HeroSection heroContent={getContent('heroSection')} />
+      <AboutSection aboutContent={getContent('aboutSection')} />
+      <ExpertiseSection expertiseContent={getContent('expertiseSection')} />
       <SkillsSection />
-      <JourneySection />
-      <PortfolioSection />
-      <ContactSection />
+      <JourneySection experienceContent={getContent('experienceSection')} />
+      <PortfolioSection portfolioContent={getContent('workSection')} />
+      <ContactSection contactContent={getContent('contactSection')} />
     </>
   );
+};
+
+const getContent = (type: string) => {
+  const { components } = portfolioData;
+  return components.filter(comp => comp._type === type)[0];
 };
 
 export default Home;
