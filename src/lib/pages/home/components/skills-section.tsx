@@ -101,6 +101,7 @@ export const SkillsSection = () => {
               rowGap='sm'
               transition='transform 0.3s'
               _hover={{ svg: { transform: 'scale(1.5)' } }}
+              cursor='pointer'
             >
               {iconMapper?.[skill.icon as IconName]({
                 h: '60px',
