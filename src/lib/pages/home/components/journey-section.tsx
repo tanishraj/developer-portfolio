@@ -39,7 +39,8 @@ export const myJourneyData = [
     endDate: '2019',
   },
 ];
-export const JourneySection = () => {
+export const JourneySection = ({ experienceContent }: any) => {
+  const { title, totalExperience } = experienceContent;
   const { colorMode } = useColorMode();
   const theme = useTheme();
 
@@ -59,10 +60,10 @@ export const JourneySection = () => {
           mb={{ base: '5xl', md: '2xl' }}
           size='page-title'
         >
-          My Expertise
+          {title}
         </Heading>
         <Path
-          myJourney={myJourneyData}
+          myJourney={totalExperience}
           position='relative'
           height={{ base: 'auto', md: '400px' }}
           pathStyle={{ color: '#444', display: { base: 'none', md: 'block' } }}

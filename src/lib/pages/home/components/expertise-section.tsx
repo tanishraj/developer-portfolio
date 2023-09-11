@@ -1,23 +1,8 @@
 import { Container, Flex, Heading } from '@chakra-ui/react';
 import { Card } from '../../../components/base/card';
-const CardsData = [
-  {
-    title: 'Adaptive Design',
-    description:
-      'I excel at building websites that offer an optimal user experience across all devices and screen sizes.',
-  },
-  {
-    title: 'JavaScript Framework',
-    description:
-      'I craft dynamic, user-centric web applications that effectively cater to diverse business needs using React & Vue.',
-  },
-  {
-    title: 'Performance Optimization',
-    description:
-      'I ensure swift, seamless web experiences through strategies like lazy loading, caching, and code minification.',
-  },
-];
-export const ExpertiseSection = () => {
+
+export const ExpertiseSection = ({ expertiseContent }: any) => {
+  const { expertiseList, title } = expertiseContent;
   return (
     <Container>
       <Flex
@@ -33,7 +18,7 @@ export const ExpertiseSection = () => {
           mb={{ base: '43px', md: '60px', lg: '72px', xl: '72px' }}
           size='page-title'
         >
-          My Expertise
+          {title}
         </Heading>
         <Flex
           flexDirection={{ base: 'column', md: 'row' }}
@@ -42,13 +27,16 @@ export const ExpertiseSection = () => {
           flexWrap={{ base: 'wrap', md: 'nowrap' }}
           gap={{ base: '5xl', md: 'xl', lg: '6xl' }}
         >
-          {CardsData.map((card, index) => (
+          {expertiseList.map((card: any, index: number) => (
             <Card
-              key={card.title}
-              title={card.title}
-              description={card.description}
+              key={card._key}
+              title={card.expertiseTitle}
+              description={card.expertiseContent}
               cardIndex={index + 1}
-              width={{ base: '100%', md: `calc(100% / ${CardsData.length})` }}
+              width={{
+                base: '100%',
+                md: `calc(100% / ${expertiseList.length})`,
+              }}
             />
           ))}
         </Flex>

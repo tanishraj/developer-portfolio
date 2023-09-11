@@ -4,7 +4,14 @@ import { RiMailFill } from 'react-icons/ri';
 import { BaseButton } from '../../../components/base/base-button';
 import { BaseTextarea } from '../../../components/base/base-text-area';
 
-export const ContactSection = () => {
+export const ContactSection = ({ contactContent }: any) => {
+  const { contactForm, title } = contactContent;
+  const messageField = contactForm.filter(
+    (field: any) => field.controlType === 'textarea'
+  )[0];
+  const buttonContent = contactForm.filter(
+    (field: any) => field.controlType === 'button'
+  )[0];
   return (
     <Container>
       <Flex
@@ -19,7 +26,7 @@ export const ContactSection = () => {
           mb={{ base: '5xl', md: '2xl' }}
           size='page-title'
         >
-          Contact
+          {title}
         </Heading>
         <Grid
           templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }}
@@ -31,18 +38,17 @@ export const ContactSection = () => {
               flexDirection='column'
               gap={{ base: '2xs', md: 'sm' }}
             >
-              <Textbox
-                label='First Name'
-                type='text'
-              />
-              <Textbox
-                label='Last Name'
-                type='text'
-              />
-              <Textbox
-                label='Email'
-                type='email'
-              />
+              {contactForm.map(
+                (field: any) =>
+                  field?.controlType !== 'textarea' &&
+                  field?.controlType !== 'button' && (
+                    <Textbox
+                      key={field?._key}
+                      label={field?.controlLabel}
+                      type={field?.controlType}
+                    />
+                  )
+              )}
             </Flex>
           </GridItem>
           <GridItem>
@@ -51,7 +57,7 @@ export const ContactSection = () => {
               height={{ base: 'auto', md: 'full' }}
             >
               <BaseTextarea
-                label='Message'
+                label={messageField?.controlLabel}
                 resize={{ base: 'vertical', md: 'none' }}
                 minHeight={{ base: 'auto', md: 'inherit' }}
                 height={{ base: '180px', md: 'calc(100% - 51px)' }}
@@ -65,7 +71,7 @@ export const ContactSection = () => {
           leftIcon={<RiMailFill />}
           iconSpacing='3xs'
         >
-          Send
+          {buttonContent?.controlLabel}
         </BaseButton>
       </Flex>
     </Container>

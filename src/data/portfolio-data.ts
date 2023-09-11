@@ -61,7 +61,7 @@ export const portfolioData = {
       photo: {
         _type: 'image',
         asset: {
-          _ref: 'image-2b297ef0e6f6ac78db1b2ed47af57a73a2214ccf-607x910-jpg',
+          _ref: '/assets/images/profile.jpg',
           _type: 'reference',
         },
       },
@@ -159,10 +159,12 @@ export const portfolioData = {
           _key: '8ccbf0737833',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
+          gridArea: '1/1/2/1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-9b0838a7d0b7cbbe9e0fdcb1a309687a20f5e338-788x525-jpg',
+              _ref: '/assets/images/project-1.jpg',
               _type: 'reference',
             },
           },
@@ -171,10 +173,12 @@ export const portfolioData = {
           _key: '400e8667b80a',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
+          gridArea: '1/2/3/3',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-c8aee9b6cc48181f4afa9f288ae2bdc3b0f498d5-1200x800-jpg',
+              _ref: '/assets/images/project-2.jpg',
               _type: 'reference',
             },
           },
@@ -183,10 +187,12 @@ export const portfolioData = {
           _key: '6c8f9b1896ed',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
+          gridArea: '2/1/4/2',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-165f2d03eaf95f4ad5249c342016bd18249c92b8-1200x800-jpg',
+              _ref: '/assets/images/project-3.jpg',
               _type: 'reference',
             },
           },
@@ -195,10 +201,12 @@ export const portfolioData = {
           _key: '295c7d729191',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
+          gridArea: '1/3/2/4',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-f7581ef713a732cca6d7aed2c16a9a8e5292fb5c-1800x1200-jpg',
+              _ref: '/assets/images/project-4.jpg',
               _type: 'reference',
             },
           },
@@ -207,10 +215,12 @@ export const portfolioData = {
           _key: '37e0e4728ddd',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
+          gridArea: '2/3/3/4',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-045ce2c597f03dcf27b8272de61e2178bd1d26a9-1200x800-jpg',
+              _ref: '/assets/images/project-5.jpg',
               _type: 'reference',
             },
           },
@@ -219,10 +229,11 @@ export const portfolioData = {
           _key: '0940e3b2cf84',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-c35e4180fab32741708269046a70e565e9d45b62-896x1311-jpg',
+              _ref: '/assets/images/project-6.jpg',
               _type: 'reference',
             },
           },
@@ -231,10 +242,11 @@ export const portfolioData = {
           _key: '07e04e2a7a3d',
           _type: 'workDetails',
           workLiveUrl: 'https://www.google.com',
+          projectName: 'Project 1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: 'image-ec24e065185eef0fa8fec56b5c291ba24f39b522-1200x800-jpg',
+              _ref: '/assets/images/project-7.jpg',
               _type: 'reference',
             },
           },
@@ -249,31 +261,31 @@ export const portfolioData = {
         {
           _key: 'c246b502a037',
           _type: 'formControls',
-          controlLable: 'First Name',
+          controlLabel: 'First Name',
           controlType: 'text',
         },
         {
           _key: '63f85fce6620',
           _type: 'formControls',
-          controlLable: 'Last Name',
+          controlLabel: 'Last Name',
           controlType: 'text',
         },
         {
           _key: 'a135a11939e4',
           _type: 'formControls',
-          controlLable: 'Email',
+          controlLabel: 'Email',
           controlType: 'email',
         },
         {
           _key: '0704b0a2e778',
           _type: 'formControls',
-          controlLable: 'Message',
+          controlLabel: 'Message',
           controlType: 'textarea',
         },
         {
           _key: '3d39991dcb12',
           _type: 'formControls',
-          controlLable: 'Send',
+          controlLabel: 'Send',
           controlType: 'button',
         },
       ],
