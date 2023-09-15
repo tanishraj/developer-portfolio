@@ -6,8 +6,20 @@ import { JourneySection } from './components/journey-section';
 import { PortfolioSection } from './components/portfolio-section';
 import { SkillsSection } from './components/skills-section';
 import { portfolioData } from '../../../data/portfolio-data';
+import { getPageData } from '../../../sanity';
+import { useEffect } from 'react';
 
 const Home = () => {
+  async function fetchPageData() {
+    const pageData = await getPageData();
+    return pageData.length > 0 && pageData?.[0]?.components;
+  }
+
+  useEffect(() => {
+    const data = fetchPageData();
+    console.log(data);
+  }, []);
+
   return (
     <>
       <HeroSection heroContent={getContent('heroSection')} />
