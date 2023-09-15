@@ -7,17 +7,22 @@ import { PortfolioSection } from './components/portfolio-section';
 import { SkillsSection } from './components/skills-section';
 import { portfolioData } from '../../../data/portfolio-data';
 import { getPageData } from '../../../sanity';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
-  async function fetchPageData() {
+  const [pageData, setPageData] = useState([]);
+
+  console.log(pageData);
+
+  const fetchPageData = async () => {
     const pageData = await getPageData();
     return pageData.length > 0 && pageData?.[0]?.components;
-  }
+  };
 
   useEffect(() => {
-    const data = fetchPageData();
-    console.log(data);
+    fetchPageData().then(data => {
+      setPageData(data);
+    });
   }, []);
 
   return (
