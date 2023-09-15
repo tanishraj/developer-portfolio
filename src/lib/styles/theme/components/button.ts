@@ -5,31 +5,32 @@ export const ButtonTheme = defineStyleConfig({
     py: '3xs',
     px: 'xs',
     borderRadius: 0,
-    background: 'black',
     _active: {
       transform: 'scale(0.95)',
     },
   },
   variants: {
-    // TODO - pass the parameters as colorMode
-    outline: () => ({
-      borderColor: '#444',
-      color: 'white',
-      _hover: {
-        borderColor: 'white',
-        background: 'black',
-      },
-      _focus: {
-        borderColor: 'white',
-        background: 'black',
-      },
-      _disabled: {
+    outline: ({ colorMode }) => {
+      const isLightMode = colorMode === 'light';
+      return {
         borderColor: '#444',
-        color: '#444',
-        pointerEvents: 'none',
-        opacity: 1,
-      },
-    }),
+        color: isLightMode ? 'black' : 'white',
+        _hover: {
+          borderColor: isLightMode ? 'black' : 'white',
+          background: isLightMode ? 'white' : 'black',
+        },
+        _focus: {
+          borderColor: isLightMode ? 'black' : 'white',
+          background: isLightMode ? 'white' : 'black',
+        },
+        _disabled: {
+          borderColor: '#444',
+          color: '#444',
+          pointerEvents: 'none',
+          opacity: 1,
+        },
+      };
+    },
   },
   sizes: {
     md: {
