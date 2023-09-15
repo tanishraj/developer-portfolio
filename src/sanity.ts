@@ -10,6 +10,5 @@ export const client = createClient({
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
 export async function getPageData() {
-  const pageData = await client.fetch('*[_type == "pageBuilder"]');
-  return pageData;
+  return await client.fetch('*[_type == "pageBuilder"]');
 }
