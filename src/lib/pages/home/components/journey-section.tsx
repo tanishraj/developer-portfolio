@@ -10,33 +10,33 @@ import { Path } from '../../../components/base/path';
 export const myJourneyData = [
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
   {
     companyName: 'Thomson Reuters',
-    startDate: '2018',
-    endDate: '2019',
+    yearOfJoining: '2018',
+    yearOfResignation: '2019',
   },
 ];
 export const JourneySection = ({ experienceContent }: any) => {

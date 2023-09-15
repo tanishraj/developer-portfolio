@@ -22,6 +22,7 @@ export const Path = (props: PathProps) => {
     connection = false,
     ...restProps
   } = props ?? {};
+
   return (
     <Flex
       alignItems='center'
@@ -58,7 +59,7 @@ export const Path = (props: PathProps) => {
             <Box className='chips'>
               <Chips
                 title={journey?.companyName}
-                description={`${journey?.startDate} - ${journey.endDate}`}
+                description={`${journey?.yearOfJoining} - ${journey?.yearOfResignation}`}
                 {...chipsStyle}
               />
             </Box>
