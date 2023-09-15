@@ -16,29 +16,32 @@ export const TextboxTheme = defineMultiStyleConfig({
     },
   }),
   variants: {
-    outline: definePartsStyle({
-      field: {
-        borderColor: '#444',
-        color: 'white',
-        _hover: {
-          borderColor: 'white',
-          background: 'black',
-        },
-        _focus: {
-          borderColor: 'white',
-          background: 'black',
-        },
-        _focusVisible: {
-          boxShadow: 'none',
-        },
-        _disabled: {
+    outline: ({ colorMode }) => {
+      const isLightMode = colorMode === 'light';
+      return definePartsStyle({
+        field: {
           borderColor: '#444',
-          color: '#444',
-          pointerEvents: 'none',
-          opacity: 1,
+          color: isLightMode ? 'black' : 'white',
+          _hover: {
+            borderColor: isLightMode ? 'black' : 'white',
+            background: isLightMode ? 'white' : 'black',
+          },
+          _focus: {
+            borderColor: isLightMode ? 'black' : 'white',
+            background: isLightMode ? 'white' : 'black',
+          },
+          _focusVisible: {
+            boxShadow: 'none',
+          },
+          _disabled: {
+            borderColor: '#444',
+            color: '#444',
+            pointerEvents: 'none',
+            opacity: 1,
+          },
         },
-      },
-    }),
+      });
+    },
   },
   sizes: {
     md: definePartsStyle({

@@ -5,28 +5,33 @@ export const TextareaTheme: ComponentStyleConfig = {
     borderRadius: 0,
     minHeight: '300px',
     minWidth: '180px',
+    py: '3xs',
+    px: '2xs',
   },
   variants: {
-    outline: {
-      borderColor: '#444',
-      color: 'white',
-      _hover: {
-        borderColor: 'white',
-        background: 'black',
-      },
-      _focus: {
-        borderColor: 'white',
-        background: 'black',
-      },
-      _focusVisible: {
-        boxShadow: 'none',
-      },
-      _disabled: {
+    outline: ({ colorMode }) => {
+      const isLightMode = colorMode === 'light';
+      return {
         borderColor: '#444',
-        color: '#444',
-        pointerEvents: 'none',
-        opacity: 1,
-      },
+        color: isLightMode ? 'black' : 'white',
+        _hover: {
+          borderColor: isLightMode ? 'black' : 'white',
+          background: isLightMode ? 'white' : 'black',
+        },
+        _focus: {
+          borderColor: isLightMode ? 'black' : 'white',
+          background: isLightMode ? 'white' : 'black',
+        },
+        _focusVisible: {
+          boxShadow: 'none',
+        },
+        _disabled: {
+          borderColor: '#444',
+          color: '#444',
+          pointerEvents: 'none',
+          opacity: 1,
+        },
+      };
     },
   },
   sizes: {
