@@ -50,8 +50,8 @@ export const TextTheme: ComponentStyleConfig = {
     },
 
     'card-title': {
-      fontSize: { base: 'md', md: 'lg', lg: '2xl', xl: '3xl' },
-      lineHeight: { base: 'xl', md: '2xl', lg: '3xl', xl: '4xl' },
+      fontSize: { base: 'md', md: 'md', lg: 'xl', xl: '2xl' },
+      lineHeight: { base: 'xl', md: 'xl', lg: '2xl', xl: '3xl' },
       fontWeight: 'bold',
       letterSpacing: 'normal',
     },
