@@ -257,28 +257,33 @@ export const portfolioData = {
     {
       _key: '92c5aba00f3e',
       _type: 'contactSection',
+      formEndPoint: 'https://getform.io/f/56b2b998-598d-4c7f-bb40-9ee8dd14b43e',
       contactForm: [
         {
           _key: 'c246b502a037',
           _type: 'formControls',
+          id: 'firstName',
           controlLabel: 'First Name',
           controlType: 'text',
         },
         {
           _key: '63f85fce6620',
           _type: 'formControls',
+          id: 'lastName',
           controlLabel: 'Last Name',
           controlType: 'text',
         },
         {
           _key: 'a135a11939e4',
           _type: 'formControls',
+          id: 'email',
           controlLabel: 'Email',
           controlType: 'email',
         },
         {
           _key: '0704b0a2e778',
           _type: 'formControls',
+          id: 'message',
           controlLabel: 'Message',
           controlType: 'textarea',
         },
