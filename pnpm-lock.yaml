@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@chakra-ui/anatomy':
     specifier: ^2.2.0
@@ -16,6 +20,9 @@ dependencies:
   '@sanity/client':
     specifier: ^6.4.12
     version: 6.4.12
+  '@sanity/image-url':
+    specifier: ^1.0.2
+    version: 1.0.2
   axios:
     specifier: ^1.5.0
     version: 1.5.0
@@ -2075,6 +2082,11 @@ packages:
       '@types/eventsource': 1.1.11
       event-source-polyfill: 1.0.31
       eventsource: 2.0.2
+    dev: false
+
+  /@sanity/image-url@1.0.2:
+    resolution: {integrity: sha512-C4+jb2ny3ZbMgEkLd7Z3C75DsxcTEoE+axXQJsQ75ou0AKWGdVsP351hqK6mJUUxn5HCSlu3vznoh7Yljye4cQ==}
+    engines: {node: '>=10.0.0'}
     dev: false
 
   /@tsconfig/node10@1.0.9:
@@ -5455,7 +5467,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

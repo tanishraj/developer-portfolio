@@ -1,5 +1,14 @@
 import { Container, Flex, Grid, Heading } from '@chakra-ui/react';
 import { PortfolioItem } from '../../../components/base/portfolio-item';
+import { urlFor } from '../../../../image-builder';
+
+const GridAreaMapper = [
+  { gridArea: '1/1/2/1' },
+  { gridArea: '1/2/3/3' },
+  { gridArea: '2/1/4/2' },
+  { gridArea: '1/3/2/4' },
+  { gridArea: '2/3/3/4' },
+];
 
 export const WorkSection = (props: any) => {
   const { workTitle, mywork } = props;
@@ -26,12 +35,17 @@ export const WorkSection = (props: any) => {
           gridAutoRows='200px'
           gridAutoFlow='dense'
         >
-          {mywork?.map((portfolio: any) => (
+          {mywork?.map((portfolio: any, index: number) => (
             <PortfolioItem
               key={portfolio._key}
-              imgSrc={portfolio?.workSample?.asset?._ref}
+              imgSrc={urlFor(portfolio?.workSample?.asset?._ref)
+                .url()
+                .toString()}
               text={portfolio?.projectName}
-              gridArea={{ base: 'auto', md: portfolio.gridArea || 'auto' }}
+              gridArea={{
+                base: 'auto',
+                md: GridAreaMapper[index]?.gridArea || 'auto',
+              }}
             />
           ))}
         </Grid>

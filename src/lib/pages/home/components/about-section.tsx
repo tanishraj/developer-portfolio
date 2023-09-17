@@ -1,4 +1,5 @@
 import { Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { urlFor } from '../../../../image-builder';
 
 export const AboutSection = (props: any) => {
   const { content, photo } = props;
@@ -26,7 +27,7 @@ export const AboutSection = (props: any) => {
             borderRadius='full'
             boxSize={{ base: '150px', md: '200px', lg: '250px' }}
             objectFit='cover'
-            src={photo.asset._ref}
+            src={urlFor(photo.asset._ref).url()}
             alt='Tanish Raj'
           />
           <Flex
