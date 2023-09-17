@@ -1,7 +1,7 @@
 import { Box, Flex, FlexProps } from '@chakra-ui/react';
 import { Hexagon, HexagonProps } from './hexagon';
 import { Chips } from './chips';
-import { myJourneyData } from '../../pages/home/components/journey-section';
+import { myJourneyData } from '../../pages/home/components/experience-section';
 
 interface PathProps extends FlexProps {
   myJourney?: typeof myJourneyData;

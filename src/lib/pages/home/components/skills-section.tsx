@@ -1,69 +1,8 @@
 import { Container, Flex, Text, Heading, useColorMode } from '@chakra-ui/react';
 import { iconMapper, IconName } from './icon-mapper';
 
-const skillSectionData = {
-  title: 'My Skills',
-  skillsList: [
-    {
-      icon: 'Html',
-      name: 'HTML',
-    },
-    {
-      icon: 'Css',
-      name: 'CSS',
-    },
-    {
-      icon: 'Scss',
-      name: 'Scss',
-    },
-    {
-      icon: 'Less',
-      name: 'less',
-    },
-    {
-      icon: 'Javascript',
-      name: 'Javascript',
-    },
-    {
-      icon: 'Typescript',
-      name: 'Typescript',
-    },
-    {
-      icon: 'React',
-      name: 'React',
-    },
-    {
-      icon: 'Redux',
-      name: 'Redux',
-    },
-    {
-      icon: 'VueJs',
-      name: 'Vue',
-    },
-    {
-      icon: 'NextJs',
-      name: 'Next',
-    },
-    {
-      icon: 'NodeJs',
-      name: 'Node',
-    },
-    {
-      icon: 'MaterialUi',
-      name: 'Material UI',
-    },
-    {
-      icon: 'Webpack',
-      name: 'Webpack',
-    },
-    {
-      icon: 'Jest',
-      name: 'jest',
-    },
-  ],
-};
-
-export const SkillsSection = () => {
+export const SkillsSection = (props: any) => {
+  const { title, skillsSet } = props;
   const { colorMode } = useColorMode();
 
   return (
@@ -80,16 +19,15 @@ export const SkillsSection = () => {
           mb='2xl'
           size='page-title'
         >
-          My Skills
+          {title}
         </Heading>
         <Flex
           flexWrap='wrap'
           justifyContent='center'
           gap='3xs'
         >
-          {skillSectionData.skillsList.map((skill, index) => (
+          {skillsSet.map((skill: any) => (
             <Flex
-              key={index}
               flexDirection='column'
               justifyContent='center'
               alignItems='center'
@@ -103,12 +41,12 @@ export const SkillsSection = () => {
               _hover={{ svg: { transform: 'scale(1.5)' } }}
               cursor='pointer'
             >
-              {iconMapper?.[skill.icon as IconName]({
+              {iconMapper?.[skill.logoName as IconName]({
                 h: '60px',
                 w: '60px',
                 color: colorMode === 'light' ? 'black' : 'white',
               })}
-              <Text size='sm-para'>{skill.name}</Text>
+              <Text size='sm-para'>{skill.skillName}</Text>
             </Flex>
           ))}
         </Flex>

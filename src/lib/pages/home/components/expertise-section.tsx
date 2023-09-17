@@ -1,8 +1,8 @@
 import { Container, Flex, Heading } from '@chakra-ui/react';
 import { Card } from '../../../components/base/card';
 
-export const ExpertiseSection = ({ expertiseContent }: any) => {
-  const { expertiseList, title } = expertiseContent;
+export const ExpertiseSection = (props: any) => {
+  const { expertiseList, title } = props;
   return (
     <Container>
       <Flex

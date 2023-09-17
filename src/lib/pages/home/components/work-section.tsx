@@ -1,8 +1,9 @@
 import { Container, Flex, Grid, Heading } from '@chakra-ui/react';
 import { PortfolioItem } from '../../../components/base/portfolio-item';
 
-export const PortfolioSection = ({ portfolioContent }: any) => {
-  const { workTitle, mywork } = portfolioContent;
+export const WorkSection = (props: any) => {
+  const { workTitle, mywork } = props;
+
   return (
     <Container>
       <Flex

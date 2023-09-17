@@ -13,8 +13,8 @@ import { BaseTextarea } from '../../../components/base/base-text-area';
 import { useState } from 'react';
 import axios from 'axios';
 
-export const ContactSection = ({ contactContent }: any) => {
-  const { contactForm, title, formEndPoint } = contactContent;
+export const ContactSection = (props: any) => {
+  const { contactForm, title, formEndPoint } = props;
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -80,7 +80,7 @@ export const ContactSection = ({ contactContent }: any) => {
                   field?.controlType !== 'button' && (
                     <Textbox
                       key={field?._key}
-                      label={field?.controlLabel}
+                      label={field?.controlLable}
                       type={field?.controlType}
                       name={field?.id}
                       value={formValues[field?.id]}
@@ -96,7 +96,7 @@ export const ContactSection = ({ contactContent }: any) => {
               height={{ base: 'auto', md: 'full' }}
             >
               <BaseTextarea
-                label={messageField?.controlLabel}
+                label={messageField?.controlLable}
                 resize={{ base: 'vertical', md: 'none' }}
                 minHeight={{ base: 'auto', md: 'inherit' }}
                 height={{ base: '180px', md: 'calc(100% - 51px)' }}
@@ -114,7 +114,7 @@ export const ContactSection = ({ contactContent }: any) => {
           onClick={handleFormSubmit}
           iconSpacing='3xs'
         >
-          {buttonContent?.controlLabel}
+          {buttonContent?.controlLable}
         </BaseButton>
         {isMessageSent && (
           <Text

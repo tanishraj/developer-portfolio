@@ -7,8 +7,8 @@ export interface HeroSectionProps {
   title: string;
 }
 
-export const HeroSection = ({ heroContent }: any) => {
-  const { subtitle, title } = heroContent;
+export const HeroSection = (props: HeroSectionProps) => {
+  const { subtitle, title } = props ?? {};
   return (
     <Container>
       <Flex

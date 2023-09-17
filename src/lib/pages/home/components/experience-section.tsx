@@ -7,40 +7,8 @@ import {
 } from '@chakra-ui/react';
 import { Path } from '../../../components/base/path';
 
-export const myJourneyData = [
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-  {
-    companyName: 'Thomson Reuters',
-    yearOfJoining: '2018',
-    yearOfResignation: '2019',
-  },
-];
-export const JourneySection = ({ experienceContent }: any) => {
-  const { title, totalExperience } = experienceContent;
+export const ExperienceSection = (props: any) => {
+  const { title, totalExperience } = props;
   const { colorMode } = useColorMode();
   const theme = useTheme();
 
