@@ -48,7 +48,7 @@ export const TextboxTheme = defineMultiStyleConfig({
       field: {
         fontSize: 'md',
         lineHeight: 'md',
-        letterSpacing: 'md',
+        letterSpacing: 'normal',
       },
     }),
   },

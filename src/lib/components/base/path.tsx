@@ -1,10 +1,9 @@
 import { Box, Flex, FlexProps } from '@chakra-ui/react';
 import { Hexagon, HexagonProps } from './hexagon';
 import { Chips } from './chips';
-import { myJourneyData } from '../../pages/home/components/experience-section';
 
 interface PathProps extends FlexProps {
-  myJourney?: typeof myJourneyData;
+  myJourney?: any;
   pathStyle?: FlexProps;
   hexagonProps?: HexagonProps;
   chipContainerStyle?: object;
@@ -42,7 +41,7 @@ export const Path = (props: PathProps) => {
       }}
       {...restProps}
     >
-      {myJourney?.map((journey, index) => (
+      {myJourney?.map((journey: any, index: number) => (
         <Flex
           key={index}
           position='relative'
@@ -59,7 +58,11 @@ export const Path = (props: PathProps) => {
             <Box className='chips'>
               <Chips
                 title={journey?.companyName}
-                description={`${journey?.yearOfJoining} - ${journey?.yearOfResignation}`}
+                description={`${journey?.yearOfJoining} - ${
+                  index === myJourney.length - 1
+                    ? 'Present'
+                    : journey?.yearOfResignation
+                }`}
                 {...chipsStyle}
               />
             </Box>

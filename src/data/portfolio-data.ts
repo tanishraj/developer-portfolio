@@ -1,14 +1,13 @@
 export const portfolioData = {
-  createdAt: '2023-08-19T11:25:03Z',
+  _createdAt: '2023-08-19T11:25:03Z',
   _id: 'e1c08282-d0ed-4b85-bb86-9594ec7cadd7',
-  _rev: 'jxxy9bfklLqTPN1tcPqI9k',
+  _rev: 'rlxdF40JXjmIMqxqc1IGnt',
   _type: 'pageBuilder',
-  _updatedAt: '2023-08-20T02:27:40Z',
   components: [
     {
       _key: '839252162d49',
       _type: 'heroSection',
-      subtitle: 'Frontend Engineer',
+      subtitle: 'Frontend Developer',
       title: 'Tanish Raj',
     },
     {
@@ -61,7 +60,7 @@ export const portfolioData = {
       photo: {
         _type: 'image',
         asset: {
-          _ref: '/assets/images/profile.jpg',
+          _ref: 'image-9b0838a7d0b7cbbe9e0fdcb1a309687a20f5e338-788x525-jpg',
           _type: 'reference',
         },
       },
@@ -86,28 +85,119 @@ export const portfolioData = {
       _type: 'expertiseSection',
       expertiseList: [
         {
-          _key: '7860044c957c',
-          _type: 'yourExpertise',
+          _key: '0f13dde8e689',
+          _type: 'expertiseCard',
           expertiseContent:
-            'I excel at building websites that offer an optimal user experience across all devices and creensizes.',
-          expertiseTitle: 'Adaptive  Design',
+            'I excel at building websites that offer an optimal user experience across all devices and screen sizes.',
+          expertiseTitle: 'Adaptive Design',
         },
         {
-          _key: '3ae23e2e2417',
-          _type: 'yourExpertise',
+          _key: '79fc8554826d',
+          _type: 'expertiseCard',
           expertiseContent:
-            'I craft dynamic, user-centric web applications that effectively cater to diverse business eedsusing React & Vue.',
-          expertiseTitle: 'JavaScript  Framework',
+            'I craft dynamic, user-centric web applications that effectively cater to diverse business needs using React & Vue.',
+          expertiseTitle: ' JavaScript Framework',
         },
         {
-          _key: '59e98d786a20',
-          _type: 'yourExpertise',
+          _key: 'f673d6ac56bb',
+          _type: 'expertiseCard',
           expertiseContent:
-            'I ensure swift, seamless web experiences through strategies like lazy loading, caching, and odeminification.',
-          expertiseTitle: 'Performance Optimization',
+            'I ensure swift, seamless web experiences through strategies like lazy loading, caching, and code minification.',
+          expertiseTitle: ' Performance Optimization',
         },
       ],
       title: 'Expertise',
+    },
+    {
+      _key: 'a4e8bbc5dcdd',
+      _type: 'skillsSection',
+      skillsSet: [
+        {
+          _key: '45c61f359399',
+          _type: 'skill',
+          logoName: 'Html',
+          skillName: 'HTML',
+        },
+        {
+          _key: '85b6e4d18b9d',
+          _type: 'skill',
+          logoName: 'Css',
+          skillName: 'CSS',
+        },
+        {
+          _key: 'fc49a7aaf18a',
+          _type: 'skill',
+          logoName: 'Scss',
+          skillName: 'Scss',
+        },
+        {
+          _key: '498cf02585d1',
+          _type: 'skill',
+          logoName: 'Less',
+          skillName: 'Less',
+        },
+        {
+          _key: '4b18dd73e55c',
+          _type: 'skill',
+          logoName: 'Javascript',
+          skillName: 'Javascript',
+        },
+        {
+          _key: '9fc23fc061b2',
+          _type: 'skill',
+          logoName: 'Typescript',
+          skillName: 'Typescript',
+        },
+        {
+          _key: 'ff297cd9b934',
+          _type: 'skill',
+          logoName: 'React',
+          skillName: 'React',
+        },
+        {
+          _key: '753279d42247',
+          _type: 'skill',
+          logoName: 'Redux',
+          skillName: 'Redux',
+        },
+        {
+          _key: '6c63e57944dc',
+          _type: 'skill',
+          logoName: 'VueJs',
+          skillName: 'VueJs',
+        },
+        {
+          _key: '6fb060bed549',
+          _type: 'skill',
+          logoName: 'NextJs',
+          skillName: 'Next',
+        },
+        {
+          _key: '3a78abc31497',
+          _type: 'skill',
+          logoName: 'NodeJs',
+          skillName: 'Node',
+        },
+        {
+          _key: 'dea5e217c721',
+          _type: 'skill',
+          logoName: 'MaterialUi',
+          skillName: 'Material UI',
+        },
+        {
+          _key: '5e809f8b54d3',
+          _type: 'skill',
+          logoName: 'Webpack',
+          skillName: 'Webpack',
+        },
+        {
+          _key: '6553238e4360',
+          _type: 'skill',
+          logoName: 'Jest',
+          skillName: 'Jest',
+        },
+      ],
+      title: 'My Skills',
     },
     {
       _key: 'b5411fe981bc',
@@ -115,39 +205,38 @@ export const portfolioData = {
       title: 'Experience',
       totalExperience: [
         {
-          _key: 'bdba2e7bec7f',
-          _type: 'yourExperience',
+          _key: '25659568a491',
+          _type: 'experience',
           companyName: 'Thomson Reuters',
-          yearOfJoining: 2017,
+          yearOfJoining: 2016,
           yearOfResignation: 2018,
         },
         {
-          _key: '02ebdc8e277f',
-          _type: 'yourExperience',
-          companyName: 'CGI',
-          yearOfJoining: 2017,
-          yearOfResignation: 2018,
+          _key: 'f67d72092667',
+          _type: 'experience',
+          companyName: 'CGI, India',
+          yearOfJoining: 2019,
+          yearOfResignation: 2020,
         },
         {
-          _key: '81ada6f30fc1',
-          _type: 'yourExperience',
-          companyName: 'Rakuten',
-          yearOfJoining: 2017,
-          yearOfResignation: 2018,
+          _key: 'e62b224da1d2',
+          _type: 'experience',
+          companyName: 'Rakuten, India',
+          yearOfJoining: 2020,
+          yearOfResignation: 2021,
         },
         {
-          _key: 'a1e4a686b1e6',
-          _type: 'yourExperience',
+          _key: 'f6dafbf43297',
+          _type: 'experience',
           companyName: 'Wells Fargo',
-          yearOfJoining: 2017,
-          yearOfResignation: 2018,
+          yearOfJoining: 2021,
+          yearOfResignation: 2022,
         },
         {
-          _key: '19e62696d75b',
-          _type: 'yourExperience',
+          _key: 'ddcba011fa99',
+          _type: 'experience',
           companyName: 'Banque Saudi Fransi',
-          yearOfJoining: 2017,
-          yearOfResignation: 2018,
+          yearOfJoining: 2022,
         },
       ],
     },
@@ -158,13 +247,12 @@ export const portfolioData = {
         {
           _key: '8ccbf0737833',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
-          gridArea: '1/1/2/1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-1.jpg',
+              _ref: 'image-9b0838a7d0b7cbbe9e0fdcb1a309687a20f5e338-788x525-jpg',
               _type: 'reference',
             },
           },
@@ -172,13 +260,12 @@ export const portfolioData = {
         {
           _key: '400e8667b80a',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
-          gridArea: '1/2/3/3',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-2.jpg',
+              _ref: 'image-c8aee9b6cc48181f4afa9f288ae2bdc3b0f498d5-1200x800-jpg',
               _type: 'reference',
             },
           },
@@ -186,13 +273,12 @@ export const portfolioData = {
         {
           _key: '6c8f9b1896ed',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
-          gridArea: '2/1/4/2',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-3.jpg',
+              _ref: 'image-165f2d03eaf95f4ad5249c342016bd18249c92b8-1200x800-jpg',
               _type: 'reference',
             },
           },
@@ -200,13 +286,12 @@ export const portfolioData = {
         {
           _key: '295c7d729191',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
-          gridArea: '1/3/2/4',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-4.jpg',
+              _ref: 'image-f7581ef713a732cca6d7aed2c16a9a8e5292fb5c-1800x1200-jpg',
               _type: 'reference',
             },
           },
@@ -214,13 +299,12 @@ export const portfolioData = {
         {
           _key: '37e0e4728ddd',
           _type: 'workDetails',
+          projectName: 'Project name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
-          gridArea: '2/3/3/4',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-5.jpg',
+              _ref: 'image-045ce2c597f03dcf27b8272de61e2178bd1d26a9-1200x800-jpg',
               _type: 'reference',
             },
           },
@@ -228,12 +312,12 @@ export const portfolioData = {
         {
           _key: '0940e3b2cf84',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-6.jpg',
+              _ref: 'image-c35e4180fab32741708269046a70e565e9d45b62-896x1311-jpg',
               _type: 'reference',
             },
           },
@@ -241,12 +325,12 @@ export const portfolioData = {
         {
           _key: '07e04e2a7a3d',
           _type: 'workDetails',
+          projectName: 'Project Name',
           workLiveUrl: 'https://www.google.com',
-          projectName: 'Project 1',
           workSample: {
             _type: 'image',
             asset: {
-              _ref: '/assets/images/project-7.jpg',
+              _ref: 'image-ec24e065185eef0fa8fec56b5c291ba24f39b522-1200x800-jpg',
               _type: 'reference',
             },
           },
@@ -257,40 +341,35 @@ export const portfolioData = {
     {
       _key: '92c5aba00f3e',
       _type: 'contactSection',
-      formEndPoint: 'https://getform.io/f/56b2b998-598d-4c7f-bb40-9ee8dd14b43e',
       contactForm: [
         {
           _key: 'c246b502a037',
           _type: 'formControls',
-          id: 'firstName',
-          controlLabel: 'First Name',
+          controlLable: 'First Name',
           controlType: 'text',
         },
         {
           _key: '63f85fce6620',
           _type: 'formControls',
-          id: 'lastName',
-          controlLabel: 'Last Name',
+          controlLable: 'Last Name',
           controlType: 'text',
         },
         {
           _key: 'a135a11939e4',
           _type: 'formControls',
-          id: 'email',
-          controlLabel: 'Email',
+          controlLable: 'Email',
           controlType: 'email',
         },
         {
           _key: '0704b0a2e778',
           _type: 'formControls',
-          id: 'message',
-          controlLabel: 'Message',
+          controlLable: 'Message',
           controlType: 'textarea',
         },
         {
           _key: '3d39991dcb12',
           _type: 'formControls',
-          controlLabel: 'Send',
+          controlLable: 'Send',
           controlType: 'button',
         },
       ],
@@ -298,4 +377,5 @@ export const portfolioData = {
     },
   ],
   pageTitle: 'Home Page',
+  _updatedAt: '2023-09-17T11:20:30.648Z',
 };
