@@ -28,6 +28,7 @@ export const SkillsSection = (props: any) => {
         >
           {skillsSet.map((skill: any) => (
             <Flex
+              key={skill._key}
               flexDirection='column'
               justifyContent='center'
               alignItems='center'

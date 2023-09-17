@@ -19,7 +19,12 @@ const Home = () => {
   return (
     <>
       {pageData.length > 0 &&
-        pageData.map(data => <ComponentMapper props={data} />)}
+        pageData.map((data: any) => (
+          <ComponentMapper
+            key={data._key}
+            props={data}
+          />
+        ))}
     </>
   );
 };
