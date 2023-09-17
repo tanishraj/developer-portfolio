@@ -1,7 +1,7 @@
 import { Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
-export const AboutSection = ({ aboutContent }: any) => {
-  const { content, photo } = aboutContent;
+export const AboutSection = (props: any) => {
+  const { content, photo } = props;
   return (
     <Container>
       <Flex
