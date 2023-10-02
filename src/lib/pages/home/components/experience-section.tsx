@@ -10,6 +10,7 @@ import { Path } from '../../../components/base/path';
 export const ExperienceSection = (props: any) => {
   const { title, totalExperience } = props;
   const { colorMode } = useColorMode();
+  const isLightMode = colorMode === 'light';
   const theme = useTheme();
 
   const borderColor = theme.colors.borderColor[colorMode];
@@ -42,9 +43,9 @@ export const ExperienceSection = (props: any) => {
             size: { base: '50px', md: '50px' },
             outlineSize: '5px',
             hexagonStyles: {
-              iconStyle: { bgColor: '#444' },
-              borderStyle: { bgColor: '#777' },
-              animationStyle: { bgColor: '#fff' },
+              iconStyle: { bgColor: isLightMode ? '#a6a6a6' : '#444' },
+              borderStyle: { bgColor: isLightMode ? '#dcdcdc' : '#777' },
+              animationStyle: { bgColor: isLightMode ? '#000' : '#fff' },
             },
           }}
           chipsStyle={{
@@ -97,10 +98,10 @@ export const ExperienceSection = (props: any) => {
             },
             ':last-child div.hexagon': {
               'div:nth-of-type(1)': {
-                bgColor: '#ccc',
+                bgColor: isLightMode ? '#000' : '#ccc',
               },
               'div:nth-of-type(2)': {
-                bgColor: 'white',
+                bgColor: isLightMode ? '#777' : 'white',
               },
               'div:nth-of-type(3)': {
                 bgColor: '#ccc',

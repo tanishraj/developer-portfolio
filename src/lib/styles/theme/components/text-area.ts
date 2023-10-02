@@ -38,7 +38,7 @@ export const TextareaTheme: ComponentStyleConfig = {
     md: {
       fontSize: 'md',
       lineHeight: 'md',
-      letterSpacing: 'md',
+      letterSpacing: 'normal',
     },
   },
   defaultProps: {
