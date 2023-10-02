@@ -13,6 +13,13 @@ import { BaseTextarea } from '../../../components/base/base-text-area';
 import { useState } from 'react';
 import axios from 'axios';
 
+const inputName = {
+  'First Name': 'firstName',
+  'Last Name': 'lastName',
+  Email: 'email',
+  Message: 'message',
+};
+
 export const ContactSection = (props: any) => {
   const { contactForm, title, formEndPoint } = props;
   const initialValues = {
@@ -30,10 +37,8 @@ export const ContactSection = (props: any) => {
     (field: any) => field.controlType === 'button'
   )[0];
 
-  const changeHandler = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+  const changeHandler = (event: any) => {
+    setFormValues({ ...formValues, [event.target.name]: event.target.value });
   };
 
   const handleFormSubmit = () => {
@@ -41,7 +46,7 @@ export const ContactSection = (props: any) => {
       .post(formEndPoint, formValues, {
         headers: { Accept: 'application/json' },
       })
-      .then(response => {
+      .then(_response => {
         setFormValues(initialValues);
         setIsMessageSent(true);
       })
@@ -82,9 +87,11 @@ export const ContactSection = (props: any) => {
                       key={field?._key}
                       label={field?.controlLable}
                       type={field?.controlType}
-                      name={field?.id}
-                      value={formValues[field?.id]}
-                      onChange={e => changeHandler(e)}
+                      name={
+                        inputName[field?.controlLable as keyof typeof inputName]
+                      }
+                      value={formValues[field?._key as keyof typeof formValues]}
+                      onChange={changeHandler}
                     />
                   )
               )}
@@ -100,9 +107,9 @@ export const ContactSection = (props: any) => {
                 resize={{ base: 'vertical', md: 'none' }}
                 minHeight={{ base: 'auto', md: 'inherit' }}
                 height={{ base: '180px', md: 'calc(100% - 51px)' }}
-                name={messageField.id}
+                name='message'
                 value={formValues.message}
-                onChange={e => changeHandler(e)}
+                onChange={changeHandler}
               />
             </Flex>
           </GridItem>
