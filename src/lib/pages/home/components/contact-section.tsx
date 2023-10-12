@@ -46,7 +46,8 @@ export const ContactSection = (props: any) => {
       .post(formEndPoint, formValues, {
         headers: { Accept: 'application/json' },
       })
-      .then(_response => {
+      .then(response => {
+        console.log('_response', response);
         setFormValues(initialValues);
         setIsMessageSent(true);
       })
