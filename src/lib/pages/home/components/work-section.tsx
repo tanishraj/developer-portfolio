@@ -42,6 +42,7 @@ export const WorkSection = (props: any) => {
                 .url()
                 .toString()}
               text={portfolio?.projectName}
+              workLiveUrl={portfolio?.workLiveUrl}
               gridArea={{
                 base: 'auto',
                 md: GridAreaMapper[index]?.gridArea || 'auto',
