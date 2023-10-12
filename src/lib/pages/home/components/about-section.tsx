@@ -1,8 +1,18 @@
-import { Container, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import {
+  Container,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  useColorMode,
+} from '@chakra-ui/react';
 import { urlFor } from '../../../../image-builder';
+import { IconName, iconMapper } from './icon-mapper';
+import { Link } from 'react-router-dom';
 
 export const AboutSection = (props: any) => {
-  const { content, photo } = props;
+  const { content, photo, socialMediaList } = props;
+  const { colorMode } = useColorMode();
   return (
     <Container>
       <Flex
@@ -20,17 +30,44 @@ export const AboutSection = (props: any) => {
           About Me
         </Heading>
         <Flex
+          flex='1'
           flexFlow={{ base: 'column', md: 'row' }}
           gap='2xl'
         >
-          <Image
-            borderRadius='full'
-            boxSize={{ base: '150px', md: '200px', lg: '250px' }}
-            objectFit='cover'
-            src={urlFor(photo.asset._ref).url()}
-            alt='Tanish Raj'
-          />
           <Flex
+            flexDirection='column'
+            width={{ base: '150px', md: '200px', lg: '250px' }}
+            gap='xs'
+          >
+            <Image
+              borderRadius='full'
+              aspectRatio='1/1'
+              boxSize={{ base: '150px', md: '200px', lg: '250px' }}
+              objectFit='cover'
+              src={urlFor(photo.asset._ref).url()}
+              alt='Tanish Raj'
+            />
+
+            <Flex
+              flexDirection='row'
+              justifyContent='center'
+              alignItems='center'
+            >
+              {socialMediaList.length > 0 &&
+                socialMediaList?.map((socialMedia: any) => (
+                  <Link
+                    to={socialMedia?.socialMediaLink}
+                    target='_blank'
+                  >
+                    {iconMapper?.[socialMedia?.socialMediaIcon as IconName]({
+                      color: colorMode === 'light' ? 'black' : 'white',
+                    })}
+                  </Link>
+                ))}
+            </Flex>
+          </Flex>
+          <Flex
+            flex='1'
             flexFlow='column'
             rowGap='sm'
           >

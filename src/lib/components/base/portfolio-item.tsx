@@ -6,16 +6,18 @@ import {
   Flex,
   Text,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 interface ItemPropsType extends GridItemProps {
   cols?: ResponsiveValue<number>;
   rows?: ResponsiveValue<number>;
   imgSrc: string;
   text?: string;
+  workLiveUrl?: string;
 }
 
 export const PortfolioItem = (itemProps: ItemPropsType) => {
-  const { cols, rows, imgSrc, text, ...restProps } = itemProps;
+  const { cols, rows, imgSrc, text, workLiveUrl, ...restProps } = itemProps;
 
   return (
     <GridItem
@@ -30,34 +32,39 @@ export const PortfolioItem = (itemProps: ItemPropsType) => {
         },
       }}
     >
-      <Image
-        src={imgSrc}
-        height='100%'
-        width='100%'
-        objectFit='cover'
-      />
-      <Flex
-        className='overlayContent'
-        width='full'
-        height='full'
-        flex='1'
-        flexDirection='column'
-        alignItems='center'
-        justifyContent='center'
-        position='absolute'
-        backgroundColor='blackAlpha.500'
-        top='50%'
-        left='50%'
-        transform='translate(-50%, -50%)'
-        display='none'
+      <Link
+        to={workLiveUrl || '#'}
+        target='_blank'
       >
-        <Text
-          as='h3'
-          size='md-para'
+        <Image
+          src={imgSrc}
+          height='100%'
+          width='100%'
+          objectFit='cover'
+        />
+        <Flex
+          className='overlayContent'
+          width='full'
+          height='full'
+          flex='1'
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+          position='absolute'
+          backgroundColor='blackAlpha.500'
+          top='50%'
+          left='50%'
+          transform='translate(-50%, -50%)'
+          display='none'
         >
-          {text}
-        </Text>
-      </Flex>
+          <Text
+            as='h3'
+            size='md-para'
+          >
+            {text}
+          </Text>
+        </Flex>
+      </Link>
     </GridItem>
   );
 };

@@ -24,6 +24,10 @@ import { ScssIcon, ScssIconProps } from '../../../assets/svg/scss-icon';
 import { ReduxIcon, ReduxIconProps } from '../../../assets/svg/redux-icon';
 import { LessIcon, LessIconProps } from '../../../assets/svg/less-icon';
 import { JestIcon, JestIconProps } from '../../../assets/svg/jest-icon';
+import {
+  LinkedInIcon,
+  LinkedInIconProps,
+} from '../../../assets/svg/linked-in-icon';
 
 export const iconMapper = {
   Html: (props: HtmlIconProps = {}) => <HtmlIcon {...props} />,
@@ -46,6 +50,7 @@ export const iconMapper = {
   ),
   Webpack: (props: WebpackIconProps = {}) => <WebpackIcon {...props} />,
   Jest: (props: JestIconProps = {}) => <JestIcon {...props} />,
+  Linkedin: (props: LinkedInIconProps = {}) => <LinkedInIcon {...props} />,
 };
 
 export type IconName = keyof typeof iconMapper;
