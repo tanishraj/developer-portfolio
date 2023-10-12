@@ -5,7 +5,7 @@ const APP_NAME = 'vite-react-chakra-starter';
 export const Meta = () => {
   return (
     <Helmet>
-      <title>Vite React Chakra Starter</title>
+      <title>Tanish Raj - Portfolio</title>
       <meta
         name='description'
         content='Vite React Chakra Starter Template'
