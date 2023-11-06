@@ -56,6 +56,7 @@ export const AboutSection = (props: any) => {
               {socialMediaList.length > 0 &&
                 socialMediaList?.map((socialMedia: any) => (
                   <Link
+                    key={socialMedia?.socialMediaLink}
                     to={socialMedia?.socialMediaLink}
                     target='_blank'
                   >

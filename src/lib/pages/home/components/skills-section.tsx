@@ -29,6 +29,7 @@ export const SkillsSection = (props: any) => {
         >
           {skillsSet.map((skill: any) => (
             <Link
+              key={skill.skillName}
               to={skill.skillUrl || '#'}
               target='_blank'
             >

@@ -21,7 +21,7 @@ const inputName = {
 };
 
 export const ContactSection = (props: any) => {
-  const { contactForm, title, formEndPoint } = props;
+  const { contactForm, title, emailSubscriptionApi } = props;
   const initialValues = {
     firstName: '',
     lastName: '',
@@ -43,7 +43,7 @@ export const ContactSection = (props: any) => {
 
   const handleFormSubmit = () => {
     axios
-      .post(formEndPoint, formValues, {
+      .post(emailSubscriptionApi, formValues, {
         headers: { Accept: 'application/json' },
       })
       .then(_response => {
